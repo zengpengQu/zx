@@ -1,0 +1,197 @@
+<title>ZX局应急平台</title>
+<div class="page-header">
+    <h1>
+        应急响应管理
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            应急事件浏览
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            应急事件启动
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+
+<!-- ajax layout which only needs content area -->
+<div class="row">
+    <div class="col-xs-2 align-right">
+            <h4>
+                <b>事件标题：</b>
+            </h4>
+    </div>
+    <div class="col-xs-8">
+        <div class="left">
+            <h4>
+                重大ZX灾害（暴雨）Ⅲ级应急响应
+            </h4>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <button class="btn btn-sm btn-success" id="returnYJButton" style="float: right;margin-bottom: 5px;"
+                onclick="javascript:history.back(-1);">
+            <i class="ace-icon fa fa-arrow-left  bigger-120"></i>
+            返回
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2 align-right">
+            <h4>
+                <b>命令编号：</b>
+            </h4>
+    </div>
+    <div class="col-xs-2 left">
+            <h4>
+                2015-90
+            </h4>
+    </div>
+    <div class="col-xs-4 align-center">
+            <h4>
+                <b>签发时间：</b>2015-10-10 20:20
+            </h4>
+    </div>
+    <div class="col-xs-4">
+        <div class="left">
+            <h4>
+                <b>签发人：</b>国家ZX局值班员
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2 align-right">
+        <h4>
+            <b>应急区域：</b>
+        </h4>
+    </div>
+    <div class="col-xs-2 left">
+        <h4>
+            北京市
+        </h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2 align-right">
+        <h4>
+            <b>响应级别：</b>
+        </h4>
+    </div>
+    <div class="col-xs-4 left">
+        <h4>
+            III级
+        </h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2 align-right">
+        <h4>
+            <b>响应机构：</b>
+        </h4>
+    </div>
+    <div class="col-xs-4 left">
+        <h4>
+            北京市ZX局，天津市ZX局
+        </h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2">
+        <div class="align-right">
+            <h4>
+                <b>附件：</b>
+            </h4>
+        </div>
+    </div>
+    <div class="col-xs-8">
+        <div class="left">
+            <h4>
+                <a>重大ZX灾害（暴雨）Ⅲ级应急响应启动命令.doc</a>
+            </h4>
+        </div>
+    </div>
+    <div class="col-xs-2">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2">
+        <div class="align-right">
+            <h4>
+                <b>命令内容：</b>
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1" style="border: 1px solid #CCC;">
+
+        <div id="wenzi"
+             style="word-break:break-all;word-wrap:break-word;padding-left:5px;padding-right:5px;overflow-x:auto;overflow-y:hidden;">
+            &nbsp;
+            <p style="text-align:center;" class="MsoNormal" align="center">
+                <span style="font-family:方正小标宋简体;color:red;font-size:32pt;">重大ZX灾害（暴雨）Ⅲ级应急响应<span></span></span>
+            </p>
+
+            <p style="text-align:center;" class="MsoNormal">
+                <span style="font-family:楷体_GB2312;font-size:15pt;">中国ZX局应急办<span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>&nbsp;</span><span>&nbsp;&nbsp;&nbsp;</span>2011<span><span>年6</span></span><span><span>月13</span></span><span><span>日08</span></span><span><span>时</span></span></span></span>
+            </p>
+
+            <p class="MsoNormal">
+                <b><span style="font-family:黑体;font-size:16pt;"></span></b>
+            </p>
+            <br/>
+
+            <p style="text-indent:23.55pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">〔总体情况〕<span></span></span></b>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+        <span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">★自<span>6</span>月<span>13</span>日起，长江中下游等地将有一次<span><a
+                href="http://www.nmc.gov.cn/publish/precipitation/1-day.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>强降水</span></span></a></span>天气过程。其中，江汉南部、江南北部以及西南地区东部等地有大到<span><a
+                href="http://www.nmc.gov.cn/publish/precipitation/1-day.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>暴雨</span></span></a></span>，部分地区大<span><a
+                href="http://www.nmc.gov.cn/publish/precipitation/1-day.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>暴雨</span></span></a></span>，其间还将伴有短时<span><a
+                href="http://www.nmc.gov.cn/publish/precipitation/1-day.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>雷雨</span></span></a></span>大风等<span><a
+                href="http://www.nmc.gov.cn/publish/swpc/main.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>强对流</span></span></a></span>天气。此次暴雨持续时间长、范围广、强度大，加之前期干旱造成土质较松，易发生<span><a
+                href="http://www.nmc.gov.cn/publish/geohazard.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>山洪</span></span></a></span>、山体<span><a
+                href="http://www.nmc.gov.cn/publish/geohazard.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>滑坡</span></span></a></span>、<span><a
+                href="http://www.nmc.gov.cn/publish/geohazard.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>泥石流</span></span></a></span>等灾害。<span></span></span>
+            </p>
+
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">农业部 </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">日，农业部再次下发紧急通知，对防汛抗灾减灾工作进行全面部署，要求有关省（区）农业部门认真贯彻落实国家防总部署安排，把防御强降雨作为当前的紧迫任务，切实增强责任意识，狠抓措施落实，努力减轻灾害影响。<span></span></span>
+            </p></div>
+    </div>
+</div>
+<script type="text/javascript">
+    var scripts = [null, null]
+    $('.page-content-area').ace_ajax('loadScripts', scripts, function () {
+        //inline scripts related to this page
+        jQuery(function ($) {
+            $('[data-toggle="buttons"] .btn').on('click', function (e) {
+                var target = $(this).find('input[type=radio]');
+                var which = parseInt(target.val());
+                $('[id*="timeline-"]').addClass('hide');
+                $('#timeline-' + which).removeClass('hide');
+            });
+        });
+
+    });
+</script>
+

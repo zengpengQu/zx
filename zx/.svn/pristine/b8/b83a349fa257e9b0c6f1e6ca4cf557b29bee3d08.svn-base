@@ -1,0 +1,575 @@
+<link rel="stylesheet" href="../../assets/css/select2.css"/>
+<link rel="stylesheet" href="../../assets/css/datepicker.css"/>
+<style>
+    .required {
+        color: #e02222;
+        padding-left: 5px;
+    }
+</style>
+
+<div class="page-header">
+    <h1>
+        基础信息
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            人员职责
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+<!--Dialog展示-->
+
+<div id="dialog-message" class="hide">
+
+    <form class="form-horizontal"  role="form">
+
+        <div class="form-group">
+            <label class="col-xs-2 control-label no-padding-right"><span
+                    class="required">*</span>职责名称：</label>
+
+            <div class="col-xs-10">
+                <input type="text"placeholder="职责名称" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-2 control-label no-padding-right"><span
+                    class="required">*</span>职责描述：</label>
+
+            <div class="col-xs-10">
+                <input type="text"placeholder="职责描述" class="form-control"/>
+            </div>
+        </div>
+
+    </form>
+
+</div><!-- #dialog-message -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <!-- PAGE CONTENT BEGINS -->
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-sm btn-success" id="newYJButton" style="float: right;margin-bottom: 5px;">
+                    <i class="ace-icon fa fa-pencil-square-o  bigger-120"></i>
+                    新增职责
+                </button>
+            </div>
+        </div><!-- #新增按钮-->
+
+        <div class="row">
+            <div class="col-xs-12">
+                <table id="simple-table" class="table table-striped table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>职责名称</th>
+                        <th>职责描述</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>场内协调</td>
+                        <td>场内协调</td>
+                        <td>
+                            <div class="hidden-sm hidden-xs btn-group">
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    上移
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    下移
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    编辑
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    删除
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>灾情统计</td>
+                        <td>灾情统计</td>
+                        <td>
+                            <div class="hidden-sm hidden-xs btn-group">
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    上移
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    下移
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    编辑
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    删除
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>场外部署</td>
+                        <td>场外部署</td>
+                        <td>
+                            <div class="hidden-sm hidden-xs btn-group">
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    上移
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    下移
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    编辑
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    删除
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>人员组织</td>
+                        <td>人员组织</td>
+                        <td>
+                            <div class="hidden-sm hidden-xs btn-group">
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    上移
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    下移
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    编辑
+                                </button>
+                                <button class="btn btn-white btn-primary btn-sm">
+                                    <i class="ace-icon fa fa-cog bigger-120 blue"></i>
+                                    删除
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.span -->
+        </div>
+        <!-- /.row -->
+
+        <div class="hr hr-18 dotted hr-double"></div>
+
+        <h4>
+            <i class="ace-icon fa fa-hand-o-right icon-animated-hand-pointer blue"></i>
+            <button class="btn btn-sm btn-success" id="alertShow">
+                <!--<i class="ace-icon fa fa-pencil-square-o  bigger-120"></i>-->
+                事件提醒展示
+            </button>
+            <!--<a href="#modal-wizard" data-toggle="modal" class="pink"> 事件提醒展示</a>-->
+        </h4>
+
+        <div id="modal-wizard" class="modal">
+            <div class="modal-dialog" style="width: 100%; margin-top: 10px; margin-bottom: 10px">
+                <div class="modal-content">
+                    <div id="modal-wizard-container">
+                        <div class="modal-header">
+                            <ul class="steps">
+                                <li data-step="1" class="active">
+                                    <span class="step">1</span>
+                                    <span class="title">审核</span>
+                                </li>
+
+                                <li data-step="2">
+                                    <span class="step">2</span>
+                                    <span class="title">紧急通知</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="modal-body step-content">
+                            <div class="step-pane active" data-step="1">
+                                <div class="center">
+                                    <form class="form-horizontal" role="form">
+
+                                        <div class="form-group">
+                                            <label class="col-xs-2  control-label no-padding-right"><span
+                                                    class="required">*</span>审核结果：</label>
+                                            <label class="col-xs-2 pos-rel">
+                                                <input type="radio" class="ace"/>
+                                                <span class="lbl">  通过</span>
+                                            </label>
+                                            <label class="col-xs-2 pos-rel">
+                                                <input type="radio" class="ace"/>
+                                                <span class="lbl">  不通过</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-xs-2 control-label no-padding-right"><span
+                                                    class="required">*</span>审核人：</label>
+
+                                            <div class="col-xs-10">
+                                                <input type="text" placeholder="审核人" class="form-control"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-xs-2 control-label no-padding-right"><span
+                                                    class="required">*</span>审核意见：</label>
+                                            <div class="col-xs-10">
+                                                <input type="text" placeholder="审核意见" class="form-control"/>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                    <div style="text-align: right">
+                                        <button class="btn btn-xs btn-purple" >上传附件</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-pane" data-step="2">
+                                <div class="center">
+                                    <!--<img src="../../assets/img/word2.png" width="650"/>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer wizard-actions">
+                        <button class="btn btn-sm btn-prev">
+                            <i class="ace-icon fa fa-arrow-left"></i>
+                            上一步
+                        </button>
+
+                        <button class="btn btn-success btn-sm btn-next" data-last="提交">
+                            下一步
+                            <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm pull-left" data-dismiss="modal">
+                            <i class="ace-icon fa fa-times"></i>
+                            取消
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hr hr-18 dotted hr-double"></div>
+
+    </div>
+    <!-- /.col -->
+</div><!-- /.row -->
+
+<!--tab样式展示-->
+<!--<div class="row">-->
+    <!--<div class="tabbable">-->
+
+        <!--<ul id="myTab" class="nav nav-tabs">-->
+            <!--<li class="active">-->
+                <!--<a href="#home" data-toggle="tab">国家局</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#profile" data-toggle="tab">省局/直属单位</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+
+        <!--<div class="tab-content">-->
+            <!--<div class="tab-pane in active" id="home">-->
+                <!--Demo-->
+            <!--</div>-->
+            <!--<div class="tab-pane" id="profile">-->
+                <!--Demo-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+<!--</div>-->
+
+<!-- page specific plugin scripts -->
+<script type="text/javascript">
+
+    var scripts = [null, "../../assets/js/dataTables/jquery.dataTables.js", "../../assets/js/dataTables/jquery.dataTables.bootstrap.js", "../../assets/js/dataTables/extensions/TableTools/js/dataTables.tableTools.js", "../../assets/js/dataTables/extensions/ColVis/js/dataTables.colVis.js", null]
+    $('.page-content-area').ace_ajax('loadScripts', scripts, function () {
+        //inline scripts related to this page
+        jQuery(function ($) {
+                $.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
+                    _title: function (title) {
+                        var $title = this.options.title || '&nbsp;'
+                        if (("title_html" in this.options) && this.options.title_html == true)
+                            title.html($title);
+                        else title.text($title);
+                    }
+                }));
+            jQuery(function ($) {
+                $('[data-toggle="buttons"] .btn').on('click', function (e) {
+                    var target = $(this).find('input[type=radio]');
+                    var which = parseInt(target.val());
+                    $('[id*="timeline-"]').addClass('hide');
+                    $('#timeline-' + which).removeClass('hide');
+                });
+            });
+            //新增应急事件窗口
+            $('#newYJButton').on(ace.click_event, function () {
+                var dialog = $('#dialog-message').removeClass('hide').dialog({
+                    modal: true,
+                    title: "<div class='widget-header widget-header-small green'><h4 class='smaller'><i class='ace-icon fa fa-check'></i> 新建职责</h4></div>",
+                    title_html: true,
+                    width: 800,
+                    height: 550,
+                    buttons: [
+                        {
+                            text: "取消",
+                            "class": "btn btn-minier",
+                            click: function () {
+                                $(this).dialog("close");
+                            }
+                        },
+                        {
+                            text: "提交",
+                            "class": "btn btn-primary btn-minier",
+                            click: function () {
+                                if ($("#SJModel").validate().form()) {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        }
+                    ]
+                });
+
+            });
+            //续报终报突发事件窗口
+            $('#addYJButton').on(ace.click_event, function () {
+                var dialog = $('#xubao').removeClass('hide').dialog({
+                    modal: true,
+                    title: "<div class='widget-header widget-header-small green'><h4 class='smaller'><i class='ace-icon fa fa-check'></i> 续报终报突发事件</h4></div>",
+                    title_html: true,
+                    width: 800,
+                    height: 550,
+                    buttons: [
+                        {
+                            text: "取消",
+                            "class": "btn btn-minier",
+                            click: function () {
+                                $(this).dialog("close");
+                            }
+                        },
+                        {
+                            text: "提交",
+                            "class": "btn btn-primary btn-minier",
+                            click: function () {
+                                if ($("#SJModel").validate().form()) {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        }
+                    ]
+                });
+
+                /**
+                 dialog.data( "uiDialog" )._title = function(title) {
+						title.html( this.options.title );
+					};
+                 **/
+            });
+
+            //新增审核窗口
+            $('#newShenhe').on(ace.click_event, function () {
+                var dialog = $('#shenhe').removeClass('hide').dialog({
+                    modal: true,
+                    title: "<div class='widget-header widget-header-small green'><h4 class='smaller'><i class='ace-icon fa fa-check'></i> 新增应急事件摘报</h4></div>",
+                    title_html: true,
+                    width: 800,
+                    height: 550,
+                    buttons: [
+                        {
+                            text: "取消",
+                            "class": "btn btn-minier",
+                            click: function () {
+                                $(this).dialog("close");
+                            }
+                        },
+                        {
+                            text: "提交",
+                            "class": "btn btn-primary btn-minier",
+                            click: function () {
+                                if ($("#SJModel").validate().form()) {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        }
+                    ]
+                });
+
+                /**
+                 dialog.data( "uiDialog" )._title = function(title) {
+						title.html( this.options.title );
+					};
+                 **/
+            });
+
+            //新增批示窗口
+            $('#newPishi').on(ace.click_event, function () {
+                var dialog = $('#pishi').removeClass('hide').dialog({
+                    modal: true,
+                    title: "<div class='widget-header widget-header-small green'><h4 class='smaller'><i class='ace-icon fa fa-check'></i> 新增突发事件批示</h4></div>",
+                    title_html: true,
+                    width: 800,
+                    height: 550,
+                    buttons: [
+                        {
+                            text: "取消",
+                            "class": "btn btn-minier",
+                            click: function () {
+                                $(this).dialog("close");
+                            }
+                        },
+                        {
+                            text: "提交",
+                            "class": "btn btn-primary btn-minier",
+                            click: function () {
+                                if ($("#SJModel").validate().form()) {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        }
+                    ]
+                });
+
+                /**
+                 dialog.data( "uiDialog" )._title = function(title) {
+						title.html( this.options.title );
+					};
+                 **/
+            });
+
+            //验证
+            var $SJModel = $("#SJModel");
+            $SJModel.validate({
+                focusInvalid: false,
+                rules: {
+                    SJ1: {
+                        required: true
+                    },
+                    SJ5: {
+                        required: true
+
+                    }
+                },
+                messages: {
+                    flagInCounts: {
+                        required: "事件名称必须填写"
+                    },
+                    flagInPrice: {
+                        required: "应急区域必须填写"
+                    }
+                }
+            });
+
+            //日期控件初始化
+            G.datepicker();
+
+
+            //事件提醒展示
+            $('#alertShow').on(ace.click_event, function () {
+                //响应事件提醒
+                jQuery.gritter.add({
+                    title: '北京地区暴雨IV响应事件',
+                    text: '测试',
+                    image: '../../assets/avatars/avatar5.png',
+                    sticky: true,
+                    time: '',
+                    class_name: 'gritter-error'
+                });
+            });
+
+            //启动应急事件窗口
+            $('#startYJButton').on(ace.click_event, function () {
+                var dialog = $("#modal-wizard").removeClass('hide').dialog({
+                    modal: true,
+                    title: "<div class='widget-header widget-header-small green' style='width: 806px'><h4 class='smaller'><i class='ace-icon fa fa-check'></i> 审核突发事件</h4></div>",
+                    title_html: true,
+                    width: 850,
+                    height: 550
+                });
+            });
+
+            var sampleData = initiateDemoData();
+            $('#tree1').ace_tree({
+                dataSource: sampleData['dataSource1'],
+                multiSelect: true,
+                cacheItems: true,
+                'open-icon' : 'ace-icon tree-minus',
+                'close-icon' : 'ace-icon tree-plus',
+                'selectable' : true,
+                'selected-icon' : 'ace-icon fa fa-check',
+                'unselected-icon' : 'ace-icon fa fa-times',
+                loadingHTML : '<div class="tree-loading"><i class="ace-icon fa fa-refresh fa-spin blue"></i></div>'
+            });
+
+            function initiateDemoData() {
+                var tree_data = {
+                    'for-sale': {text: '机构名称', type: 'folder'}
+                }
+                tree_data['for-sale']['additionalParameters'] = {
+                    'children' : {
+                        'appliances' : {text: '中国ZX局', type: 'item'},
+                        'arts-crafts' : {text: '北京ZX局', type: 'item'},
+                        'clothing' : {text: '山东ZX局', type: 'item'},
+                        'computers' : {text: '河北ZX局', type: 'item'}
+                    }
+                }
+                var dataSource1 = function(options, callback){
+                    var $data = null
+                    if(!("text" in options) && !("type" in options)){
+                        $data = tree_data;//the root tree
+                        callback({ data: $data });
+                        return;
+                    }
+                    else if("type" in options && options.type == "folder") {
+                        if("additionalParameters" in options && "children" in options.additionalParameters)
+                            $data = options.additionalParameters.children || {};
+                        else $data = {}//no data
+                    }
+
+                    if($data != null)//this setTimeout is only for mimicking some random delay
+                        setTimeout(function(){callback({ data: $data });} , parseInt(Math.random() * 500) + 200);
+
+                    //we have used static data here
+                    //but you can retrieve your data dynamically from a server using ajax call
+                    //checkout examples/treeview.html and examples/treeview.js for more info
+                }
+                return {'dataSource1': dataSource1}
+            }
+
+
+            $('#modal-wizard-container').ace_wizard();
+            $('#modal-wizard .wizard-actions .btn[data-dismiss=modal]').removeAttr('disabled');
+
+
+        });
+    });
+</script>

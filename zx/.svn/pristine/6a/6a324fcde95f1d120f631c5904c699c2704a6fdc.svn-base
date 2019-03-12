@@ -1,0 +1,365 @@
+<title>ZX局应急平台</title>
+<div class="page-header">
+    <h1>
+        特别工作管理
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            特别工作浏览
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            特别工作解除
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+
+<!-- ajax layout which only needs content area -->
+<div class="row">
+    <div class="col-xs-2 align-right">
+            <h4>
+                <b>标题：</b>
+            </h4>
+    </div>
+    <div class="col-xs-8">
+        <div class="left">
+            <h4>
+                深圳大运会特别工作状态
+            </h4>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <button class="btn btn-sm btn-success" id="returnYJButton" style="float: right;margin-bottom: 5px;"
+                onclick="javascript:history.back(-1);">
+            <i class="ace-icon fa fa-arrow-left  bigger-120"></i>
+            返回
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-4 align-center">
+            <h4>
+                <b>签发人：</b>广东省ZX局
+            </h4>
+    </div>
+    <div class="col-xs-4">
+        <div class="left">
+            <h4>
+                <b>签发时间：</b>2011-6-13 08:00
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2">
+        <div class="align-right">
+            <h4>
+                <b>附件：</b>
+            </h4>
+        </div>
+    </div>
+    <div class="col-xs-8">
+        <div class="left">
+            <h4>
+                <a>深圳大运会特别工作状态.doc</a>
+            </h4>
+        </div>
+    </div>
+    <div class="col-xs-2">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-2">
+        <div class="align-right">
+            <h4>
+                <b>内容：</b>
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1" style="border: 1px solid #CCC;">
+
+        <div id="wenzi"
+             style="word-break:break-all;word-wrap:break-word;padding-left:5px;padding-right:5px;overflow-x:auto;overflow-y:hidden;">
+            &nbsp;
+            <p style="text-align:center;" class="MsoNormal" align="center">
+                <span style="font-family:方正小标宋简体;color:red;font-size:32pt;">深圳大运会特别工作状态<span></span></span>
+            </p>
+
+            <p style="text-align:center;" class="MsoNormal" align="center">
+                <span style="font-family:黑体;font-size:16pt;">第<span>1</span>期 （总第<span>21</span>期）<span></span></span>
+            </p>
+
+            <p style="text-align:center;" class="MsoNormal">
+                <span style="font-family:楷体_GB2312;font-size:15pt;">中国ZX局应急办<span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>&nbsp;</span><span>&nbsp;&nbsp;&nbsp;</span>2011<span><span>年6</span></span><span><span>月13</span></span><span><span>日08</span></span><span><span>时</span></span></span></span>
+            </p>
+
+            <p class="MsoNormal">
+                <b><span style="font-family:黑体;font-size:16pt;"></span></b>
+            </p>
+            <br/>
+
+            <p style="text-indent:23.55pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">〔总体情况〕<span></span></span></b>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+        <span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">★自<span>6</span>月<span>13</span>日起，长江中下游等地将有一次<span><a
+                href="http://www.nmc.gov.cn/publish/precipitation/1-day.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>强降水</span></span></a></span>天气过程。其中，江汉南部、江南北部以及西南地区东部等地有大到<span><a
+                href="http://www.nmc.gov.cn/publish/precipitation/1-day.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>暴雨</span></span></a></span>，部分地区大<span><a
+                href="http://www.nmc.gov.cn/publish/precipitation/1-day.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>暴雨</span></span></a></span>，其间还将伴有短时<span><a
+                href="http://www.nmc.gov.cn/publish/precipitation/1-day.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>雷雨</span></span></a></span>大风等<span><a
+                href="http://www.nmc.gov.cn/publish/swpc/main.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>强对流</span></span></a></span>天气。此次暴雨持续时间长、范围广、强度大，加之前期干旱造成土质较松，易发生<span><a
+                href="http://www.nmc.gov.cn/publish/geohazard.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>山洪</span></span></a></span>、山体<span><a
+                href="http://www.nmc.gov.cn/publish/geohazard.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>滑坡</span></span></a></span>、<span><a
+                href="http://www.nmc.gov.cn/publish/geohazard.htm" target="_blank"><span
+                style="color:windowtext;text-decoration:none;"><span>泥石流</span></span></a></span>等灾害。<span></span></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">★<span>6</span>月<span>12</span>日<span>10</span>时，矫梅燕副局长签发中国ZX局重大ZX灾害Ⅲ级应急响应命令，要求应急办、减灾司、预报司、观测司，ZX中心、气候中心、卫星中心、信息中心、探测中心、公共服务中心、报社、华风集团，湖南、湖北、安徽、浙江、贵州省ZX局等单位立即进入Ⅲ级应急响应状态，积极有效应对长江中下游地区新一轮强降水天气过程。其他可能受本次灾害性天气过程影响的省（区、市）ZX局做好应急响应准备。<span></span></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">★<span>6</span>月<span>12</span>日<span>8</span>时，中央ZX台全国天气会商聚焦南方降雨。中国ZX局局长郑国光、副局长矫梅燕参加会商。<span></span></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span
+                        style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">〔各省局工作动态〕<span></span></span></b>
+            </p>
+
+            <p style="text-align:left;text-indent:31.4pt;" class="MsoNormal" align="left">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">湖北省局 </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">6</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">月<span>12</span>日</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">时</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">启动湖北省重大ZX灾害（暴雨）Ⅲ级应急响应命令后，省局下发《<a
+                    name="标题"></a>关于进一步做好汛期复杂天气形势ZX服务工作的通知</a>
+                》，提出部署强降水ZX服务工作的六项要求。<b>一是</b>切实加强组织领导，认真做好业务值守工作；<b>二是</b>认真分析近期天气气候特点，开展针对性ZX服务；<b>三是</b>充分利用新建业务服务系统和现代化建设成果，提高预报服务质量和精细化程度；<b>四是</b>充分利用各种渠道，做好预警发布和部门联动；<b>五是</b>加大汛期ZX服务工作宣传，做好舆论引导；<b>六要</b>做好汛期各项ZX服务保障工作。此外，省局认真按照应急响应期间的有关要求，认真执行行政、业务和应急领导带班和值班制度。其他各项应急工作也有序开展。</span><span
+                    style="line-height:150%;font-size:15pt;"></span>
+            </p>
+
+            <p style="text-indent:32.7pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">安徽省局 </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">6</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">月<span>9</span>日</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">，省局发出《关于做好我省<span>9</span>—<span>15</span>日降雨过程ZX服务工作的通知》，特别强调要发挥部门联动作用，共同做好水库防汛和山洪地质灾害预警预报。<span>11</span>日，转发了中国ZX局郑国光局长关于做好近期ZX服务的四点要求以及省局于波局长的贯彻落实意见，各级ZX部门按要求全力以赴做好强降雨过程的监测预报和服务工作。因新一轮降雨将从<span>13</span>日开始，省局拟于<span>13</span>日上午发布启动重大ZX灾害Ⅲ级应急响应命令，要求淮河以南各市ZX部门进入应急状态。</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;"></span>
+            </p>
+
+            <p style="text-align:left;text-indent:32pt;" class="MsoNormal" align="left">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">浙江省局</span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;"> </span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">6</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">月<span>9</span>日</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">，省局再次发布《重要ZX报告》，指出“<span>10</span>日起浙江省入梅，未来<span>3</span>～<span>5</span>天浙江省多大雨暴雨天气。”“且强降水落区与上次可能有重叠，防灾压力较大，需防汛抗旱两手抓，并要注意部分地区出现旱涝急转。”并专门向<span>30</span>多位省级部门联络员发送短信，通报了<span>10</span>日全省入梅的预测信息，指出未来<span>3</span>～<span>5</span>天浙江省多大雨暴雨天气，且强降水落区与上次可能有重叠，提醒注意局地强对流和短时强降水影响。之后，省局每天通过短信向各联络员通报天气监测预报信息。同时与当地应急办、防汛办、城管办、国土等相关部门密切联系，加强信息沟通。ZX协理员、部门联络员等也及时转发ZX部门发布的预警信息，并做好信息的反馈，通过电话、网络等上报ZX雨情和灾情。</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:14pt;"></span>
+            </p>
+
+            <p style="text-align:left;text-indent:31.4pt;" class="MsoNormal" align="left">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">湖南省局</span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">6</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">月<span>11</span>日上午</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">，省局组织召开全省电视电话会议，祝燕德局长传达贯彻落实郑国光局长<span>11</span>日早间天气会商后的重要讲话精神，对当前防汛抗灾ZX服务工作进行再动员再部署，并下发了《关于贯彻落实中国ZX局和省委省政府主要领导重要讲话精神的紧急通知》。<span>6</span>月<span>12</span>日上午<span>10</span>时，收到中国ZX局宣布启动重大ZX灾害三级应急响应命令后，湖南省ZX局祝局长指出：湖南局<span>6</span>月<span>9</span>日已启动三级应急响应。请迅速将此命令传到各级ZX部门，保持全省ZX部门三级响应工作状态，并向上级报告。<span>13</span>日省ZX台再发一期《重大ZX信息专报》，做好决策ZX服务。目前，全省ZX部门严阵以待，从监测、预报到预警、服务，从直属单位到各市（州）、县ZX局、从领导到职工，既分工又合作，积极有效的开展防汛ZX服务工作。<span>12</span>日上午，省局潘志祥副局长到省防指现场汇报近期天气情况。<span>10</span>时，通过短信向全省<span>146201</span>位预警用户发送了强降水天气预警信息，指出<span>13</span>日开始湘中以北地区将出现明显的降水天气过程，局部地区有暴雨或大暴雨，提醒加强防范山洪及地质灾害。</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:14pt;"></span>
+            </p>
+
+            <p style="text-indent:31.4pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">贵州省局<span
+                        style="color:red;"> </span></span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">6</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">月<span>12</span>日<span>10</span>时</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">，省局将<span>6</span>月<span>11</span>日Ⅳ级应急响应提升为Ⅲ级。随后，省局召开了全省汛期ZX服务紧急电视电话会议，传达学习郑国光局长对近期ZX服务工作四项部署，进一步安排部署各项ZX服务工作。向红琼局长签发专题服务材料《<span>13</span>日至<span>16</span>日我省大部将出现暴雨天气》，送省委省政府以及防汛、国土、民政等部门。下发了《关于确保主汛期观测系统和通信网络设备正常运行的紧急通知》，《关于做好近期暴雨天气预报预警工作的通知》以及《关于进一步加强炮站作业民兵纳入ZX信息员管理工作的通知》，对观测系统和通信网络设备运行维护、预报预警、基层ZX防灾减灾等工作作出安排部署。全省各级ZX部门将严格按照中国ZX局和省局要求，全力做好监测、预报预警，服务和应急值守等各项工作。</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:14pt;"></span>
+            </p>
+
+            <p style="text-indent:27.45pt;" class="MsoNormal">
+                <span style="font-family:仿宋_GB2312;font-size:14pt;"></span>
+            </p>
+
+            <p style="text-indent:31.2pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">〔中国ZX局工作动态〕<span></span></span></b>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">局办公室 </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">密切</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">关注各地暴雨汛情，及时收集整理舆情，协调组织相关新闻媒体做好本次降水ZX服务情况宣传报道工作。<span></span></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">局应急办</span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;"> 根据降水情况及时提出提升应急响应等级建议。加强应急工作的指导与协调，</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">收集各地应急工作情况。制作《值班快报》<span
+                    style="color:black;">2</span>期报国办。<span></span></span>
+            </p>
+
+            <p style="text-align:left;text-indent:32pt;" class="MsoNormal" align="left">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">ZX中心<span
+                        style="color:red;"> </span></span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">日，<a
+                    name="OLE_LINK1"></a>与湖北、湖南、安徽、浙江省局进行视频会商</a>
+                ，于<span>18</span>时发布暴雨蓝色预警。制作<span>1</span>期ZX灾害预警服务快报、<span>1</span>期两办刊物信息、<span>1</span>期每日天气提示。及时向有关领导发短信报告雨情、灾情及暴雨预警信息。<span></span></span>
+            </p>
+
+            <p style="text-align:left;text-indent:32pt;" class="MsoNormal" align="left">
+                <b><span
+                        style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">气候中心 </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">日，组织技术人员对<span>6</span>月<span>1-12</span>日长江流域降水量与常年对比分析，分析了<span>6</span>月<span>1-12</span>日长江流域各省降水情况，制作<span>1</span>期重要气候信息。<span></span></span>
+            </p>
+
+            <p style="text-align:left;text-indent:32pt;" class="MsoNormal" align="left">
+                <b><span
+                        style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">卫星中心 </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">日，</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">制作<span>1</span>期南方暴雨监测报告，向相关单位传送云导风、云分类、降水估计产品、电视云图等。<span></span></span>
+            </p>
+
+            <p style="text-align:left;text-indent:32pt;" class="MsoNormal" align="left">
+                <b><span
+                        style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">信息中心 </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">保障视频天气会商系统的正常运行。资料接收、分发、入库正常。<span></span></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span
+                        style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">探测中心 </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">加强对重大ZX灾害<span>(</span>暴雨<span>)</span>Ⅲ级应急响应区域湖南、湖北、安徽、浙江、贵州省ZX探测设备的监控和保障，确保探测设备的正常运行。<span></span></span>
+            </p>
+
+            <p style="text-align:left;text-indent:32pt;" class="MsoNormal" align="left">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">公共服务中心</span></b><b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;"> </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">日，组织紧急制作推出《ZX部门全力应对长江中下游新一轮暴雨》专题，第一时间发布预报预警和相关资讯，对强降雨给湖北、湖南、安徽、贵州、江西等地造成的灾害进行及时跟踪报道。积极制作《ZX服务公报》、《ZX服务手机报》等服务产品，全面做好应急ZX服务工作。</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:red;font-size:16pt;"></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span
+                        style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">ZX报社 </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">迅速发布应急消息，紧急制作暴雨专题，在网上共刊发汛期宣传稿件<span>40</span>篇，相关图片<span>13</span>组。</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;"></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <span style="line-height:150%;font-family:仿宋_GB2312;color:red;font-size:16pt;"></span>
+            </p>
+
+            <p style="text-align:left;text-indent:26.9pt;" class="MsoNormal" align="left">
+                <b><span
+                        style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">〔宣传报道〕<span></span></span></b>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">社会媒体</span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;"> </span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">日</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">时，中央电视台“新闻三十分”节目报道中国ZX局启动暴雨Ⅲ级响应有关情况。公共频道《联播天气预报》、《朝闻天下天气预报》、<span>CCTV2</span>《第一印象》、<span>CCTV5</span>《天气体育》、<span>CCTV4</span>《天气预报》、<span>CCTV News</span>《天气预报》、《凤凰ZX站》、《旅游天气预报》、《阳光风云录》、新华社英语天气预报、广播经济之声天气节目、中国之声《万千ZX》等栏目，</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">对</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">13</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">日起长江中下游等地将有一次<span><a
+                    href="http://www.nmc.gov.cn/publish/precipitation/1-day.htm" target="_blank"><span
+                    style="color:black;text-decoration:none;"><span>强降水</span></span></a></span>天气过程</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">做了报道</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">。<span></span></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">人民网、新华网、中国政府网、中国新闻网、凤凰网等<span>40</span>余家网站媒体陆续发布和转载《ZX局启Ⅲ级响应 应对长江中下游新一轮暴雨》、《长江中下游未来四天仍有强降雨》、《长江中下游将遇强降雨ZX局启动Ⅲ级应急响应》等报道。</span><b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;"></span></b>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span
+                        style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">CMA</span></b><b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">网</span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">日<span>10</span>时至<span>16</span>时<span>30</span>分</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">，<span>CMA</span>中文网首页和汛期专题报道中发布：《中国ZX局启动Ⅲ级应急响应 应对长江中下游新一轮暴雨》</span><span
+                    style="font-family:宋体;color:black;">、</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">《ZX部门全力应对长江中下游新一轮暴雨》等消息，<span>CMA</span>英文网编发启动应急稿件<span>2</span>篇，中国ZX网新浪微博发布启动三级应急响应消息。<span></span></span>
+            </p>
+
+            <p style="text-indent:31.4pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">中国ZX报</span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">日<span style="color:black;">发布《中国ZX局启动Ⅲ应急响应》消息，同时，值班编辑紧急连线湖北、湖南、江西、安徽等地，安排版面介绍各地针对暴雨的最新服务工作情况。<span></span></span></span>
+            </p>
+
+            <p style="text-align:left;text-indent:32pt;" class="MsoNormal" align="left">
+                <b><span
+                        style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">中国天气网 </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">日<span>10</span>时至<span>16</span>时<span>30</span>分，共发布《中国ZX局启动重大ZX灾害（暴雨）三级应急响应》、《暴雨蓝色预警：湖南江西浙江福建局地有暴雨》、《新一轮暴雨将袭湖南 <span>&nbsp;</span>山洪地质灾害防御不放松》、《湖南抗击入汛以来最强暴雨ZX服务纪实》、《湖南岳阳临湘市遭遇严重山洪泥石流》、</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">《长江中下游未来四天仍有强降雨》、</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">《广西强降雨近期需防雷》、《广东珠三角暴雨 多地航班延误》等相关信息。</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:red;font-size:16pt;"></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">ZX频道</span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;"> </span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">日</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">通过滚动字幕和《风云快报》发布</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">启动Ⅲ级应急响应</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">信息，在节目中重点报道湖北、湖南、安徽、浙江、贵州、江西等地强降雨新闻。<span></span></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <span style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;"></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span
+                        style="line-height:150%;font-family:仿宋_GB2312;font-size:16pt;">〔各部委工作动态〕<span></span></span></b>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span
+                        style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">国家防汛抗旱总指挥部</span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;"> 11</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">日<span>11</span>时启动防汛</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">Ⅲ级应急响应。针对<span>6</span>月<span>13</span>—<span>15</span>日长江中下游地区还将有较强降雨过程，<span>12</span>日，国家防总要求各地各有关部门高度重视大旱之后的局地暴雨，认真做好山洪地质灾害的防御工作，切实加强水库、水电站安全度汛工作，全力做好当前防汛抗洪救灾的各项工作。国家防总派往湖南、湖北、江西、安徽的工作组，继续在灾区指导和协助地方做好抗洪抢险救灾工作。<span></span></span>
+            </p>
+
+            <p style="text-indent:32pt;" class="MsoNormal">
+                <b><span style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">农业部 </span></b><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">12</span><span
+                    style="line-height:150%;font-family:仿宋_GB2312;color:black;font-size:16pt;">日，农业部再次下发紧急通知，对防汛抗灾减灾工作进行全面部署，要求有关省（区）农业部门认真贯彻落实国家防总部署安排，把防御强降雨作为当前的紧迫任务，切实增强责任意识，狠抓措施落实，努力减轻灾害影响。<span></span></span>
+            </p></div>
+    </div>
+</div>
+<script type="text/javascript">
+    var scripts = [null, null]
+    $('.page-content-area').ace_ajax('loadScripts', scripts, function () {
+        //inline scripts related to this page
+        jQuery(function ($) {
+            $('[data-toggle="buttons"] .btn').on('click', function (e) {
+                var target = $(this).find('input[type=radio]');
+                var which = parseInt(target.val());
+                $('[id*="timeline-"]').addClass('hide');
+                $('#timeline-' + which).removeClass('hide');
+            });
+        });
+
+    });
+</script>
+

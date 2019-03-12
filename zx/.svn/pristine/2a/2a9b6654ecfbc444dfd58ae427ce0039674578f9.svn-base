@@ -1,0 +1,979 @@
+<!-- ajax layout which only needs content area -->
+
+<div class="page-header">
+    <h1>
+        首页
+        <small>
+
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            监控页面
+        </small>
+    </h1>
+</div>
+<!-- /.page-header -->
+
+<div class="alert alert-block alert-success" style="padding: 5px;margin-bottom: 9px">
+    <strong class="green">紧急通知</strong>
+</div>
+
+<div class="row">
+
+
+    <div class="col-xs-8">
+
+        <div class="widget-box  widget-col-sm-12" style="height: 370px;">
+            <div class="widget-header">
+                <h4 class="widget-title lighter smaller">
+                    <i class="ace-icon fa fa-rss green"></i>
+                    <span style="font-weight: bold">最新动态</span>
+                </h4>
+            </div>
+            <div class="widget-body">
+                <div class="widget-main no-padding">
+                    <!-- #section:pages/dashboard.conversations -->
+                    <div class="dialogs">
+                        <div class="itemdiv dialogdiv">
+                            <div class="user">
+                                <i class="timeline-indicator ace-icon fa fa-book btn btn-success no-hover bigger-270 img" style="border-color: white"></i>
+                            </div>
+
+                            <div class="body">
+                                <div class="time">
+                                    <i class="ace-icon fa fa-clock-o"></i>
+                                    <span class="green">3天前</span>
+                                </div>
+
+                                <div class="name">
+                                    <i class="label label-sm label-primary arrowed arrowed-right" style="font-style: normal">已审核</i>
+                                    <a href="#">河南省ZX局值班员已审核警报</a>
+                                </div>
+                                <div class="text">河南省ZX局关于洛阳暴雨事件发出警报</div>
+
+                                <div class="tools">
+                                    <span class="green">2015-11-18 15:09</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--<div class="itemdiv dialogdiv">-->
+                            <!--<div class=" user ">-->
+                                <!--<i class="timeline-indicator ace-icon fa fa-pencil-square-o btn btn-grey no-hover bigger-270 img" style="border-color: white"></i>-->
+                            <!--</div>-->
+
+                            <!--<div class="body">-->
+                                <!--<div class="time">-->
+                                    <!--<i class="ace-icon fa fa-clock-o"></i>-->
+                                    <!--<span class="blue">3天前</span>-->
+                                <!--</div>-->
+
+                                <!--<div class="name">-->
+                                    <!--<i class="label label-sm label-danger arrowed arrowed-right" style="font-style: normal">未审核</i>-->
+                                    <!--<a href="#">河北省ZX局领导提交突发事件</a>-->
+                                <!--</div>-->
+                                <!--<div class="text">河北省ZX局关于邢台冰雹事件的报告河北省ZX局关于邢台冰雹事件的报告河北省ZX局关于邢台冰雹事件的报告河北省ZX局关于邢台冰雹事件的报告河北省ZX局关于邢台冰雹事件的报告河北省ZX局关于邢台冰雹事件的报告...</div>-->
+
+                                <!--<div class="tools">-->
+                                    <!--<span class="blue">2015-11-18 15:09</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <div class="itemdiv dialogdiv">
+                            <div class="user">
+                                <i class="timeline-indicator ace-icon fa fa-cog btn btn-purple no-hover bigger-270 img"  style="border-color: white"></i>
+                            </div>
+
+                            <div class="body">
+                                <div class="time">
+                                    <i class="ace-icon fa fa-clock-o"></i>
+                                    <span class="orange">5天前</span>
+                                </div>
+
+                                <div class="name">
+                                    <i class="label label-sm label-primary arrowed arrowed-right" style="font-style: normal">已审核</i>
+                                    <a href="#">北京市ZX局值班员已审核突发事件</a>
+                                </div>
+                                <div class="text">北京ZX局关于全市大雪的响应</div>
+
+                                <div class="tools">
+                                    <span class="orange">2015-11-18 15:09</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="itemdiv dialogdiv">
+                            <div class="user">
+                                <i class="timeline-indicator ace-icon fa fa-info-circle btn btn-danger no-hover bigger-270 img" style="border-color: white"></i>
+                            </div>
+
+                            <div class="body">
+                                <div class="time">
+                                    <i class="ace-icon fa fa-clock-o"></i>
+                                    <span class="grey">6天前</span>
+                                </div>
+
+                                <div class="name">
+                                    <i class="label label-sm label-danger arrowed arrowed-right" style="font-style: normal">未审核</i>
+                                    <a href="#">安徽省ZX局上报突发事件</a>
+                                </div>
+                                <div class="text">安徽省ZX局关于大雨预警的申请</div>
+
+                                <div class="tools">
+                                    <span class="grey" >2015-11-18 15:09</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="itemdiv dialogdiv">
+                            <div class="user">
+                                <i class="timeline-indicator ace-icon fa fa-leaf btn btn-primary no-hover bigger-270 img"style="border-color: white"></i>
+                            </div>
+
+                            <div class="body">
+                                <div class="time">
+                                    <i class="ace-icon fa fa-clock-o"></i>
+                                    <span class="green">8天前</span>
+                                </div>
+
+                                <div class="name">
+                                    <i class="label label-sm label-primary arrowed arrowed-right" style="font-style: normal">已审核</i>
+                                    <a href="#">山东省ZX局值班员已审核突发事件</a>
+                                </div>
+                                <div class="text">山东省ZX局关于枣庄紧急事件的报告</div>
+                                <div class="tools">
+                                    <span class="green">2015-11-18 15:09</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /section:pages/dashboard.conversations -->
+                </div><!-- /.widget-main -->
+            </div>
+        </div>
+
+        <div class="widget-box  widget-col-sm-12" style="height: 400px;">
+            <div class="widget-header">
+                <h4 class="widget-title lighter smaller">
+                    <i class="ace-icon fa fa-rss green"></i>
+                    <span style="font-weight: bold">GIS展示</span>
+                </h4>
+            </div>
+            <div id="map" class=" widget-container-col" style="width:100%; height: 90%;text-align: right">
+            </div>
+        </div>
+
+        <div class="widget-box " style="margin-top: 10px">
+            <!-- #section:custom/widget-box.options -->
+            <div class="widget-header">
+                <h5 class="widget-title bigger lighter">
+                    <i class="ace-icon fa fa-bolt orange2"></i>
+                    <span style="font-weight: bold">最近突发事件</span>
+                </h5>
+            </div>
+            <!-- /section:custom/widget-box.options -->
+            <div class="widget-body">
+                <div class="widget-main no-padding">
+                    <table class="table table-striped table-hover">
+                        <thead class="thin-border-bottom">
+                        <tr>
+                            <th>
+                                突发事件名称
+                            </th>
+                            <th>
+                                签发人
+                            </th>
+                            <th class="hidden-480">
+                                事件类型
+                            </th>
+                            <th>
+                                上报时间
+                            </th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>
+                                <a href="#">北京突发事件</a>
+                            </td>
+                            <td class="">国家局</td>
+                            <td class="hidden-480">
+                                <span class="label label-success arrowed-in arrowed-in-right">ZX灾害事件</span>
+                            </td>
+                            <td>2015-11-12 10:44</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <a href="#">北京突发事件</a>
+                            </td>
+                            <td class="">国家局</td>
+                            <td class="hidden-480">
+                                <span class="label label-danger arrowed-in arrowed-in-right">重大ZX灾害事件</span>
+                            </td>
+                            <td>2015-11-12 10:44</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <a href="#">北京突发事件</a>
+                            </td>
+                            <td class="">国家局</td>
+                            <td class="hidden-480">
+                                <span class="label label-danger arrowed-in arrowed-in-right">重大ZX灾害事件</span>
+                            </td>
+                            <td>2015-11-12 10:44</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <a href="#">北京突发事件</a>
+                            </td>
+                            <td class="">国家局</td>
+                            <td class="hidden-480">
+                                <span class="label label-danger arrowed-in arrowed-in-right">重大ZX灾害事件</span>
+                            </td>
+                            <td>2015-11-12 10:44</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <a href="#">北京突发事件</a>
+                            </td>
+                            <td class="">国家局</td>
+                            <td class="hidden-480">
+                                <span class="label label-danger arrowed-in arrowed-in-right">重大ZX灾害事件</span>
+                            </td>
+                            <td>2015-11-12 10:44</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="widget-box transparent" id="recent-box">
+            <div class="widget-header">
+                <div class="widget-toolbar no-border">
+                    <ul class="nav nav-tabs" id="recent-tab">
+                        <li class="active">
+                            <a data-toggle="tab" href="#outburst-tab">突发事件统计</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#answer-tab">应急响应统计</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="widget-body">
+                <div class="widget-main padding-4">
+                    <div class="tab-content padding-8">
+                        <div id="outburst-tab" class="tab-pane active">
+                            <!--<h4 class="smaller lighter green">-->
+                            <!--<i class="ace-icon fa fa-list"></i>-->
+                            <!--突发事件-->
+                            <!--</h4>-->
+                            <div id="chart" class=" widget-container-col" style="width:100%; height: 300px;"></div>
+                        </div>
+                        <div id="answer-tab" class="tab-pane">
+                            <h4 class="smaller lighter green">
+                                <i class="ace-icon fa fa-list"></i>
+                                应急响应
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--<div class="widget-box col-xs-12" style=" border: 1px solid #ffffff;">-->
+            <!--<div class="widget-box  col-sm-6" style="width: 365px;margin-right: 8px">-->
+                <!--&lt;!&ndash; #section:custom/widget-box.options &ndash;&gt;-->
+                <!--<div class="widget-header">-->
+                    <!--<h5 class="widget-title bigger lighter">-->
+                        <!--<i class="ace-icon fa fa-bullhorn green"></i>-->
+                        <!--<span style="font-weight: bold">最新公告</span>-->
+                    <!--</h5>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /section:custom/widget-box.options &ndash;&gt;-->
+                <!--<div class="widget-body">-->
+                    <!--<div class="widget-main no-padding">-->
+                        <!--<table class="table table-striped table-hover">-->
+
+
+                            <!--<tbody>-->
+                            <!--<tr>-->
+                                <!--<td style="text-align: right"><i class="ace-icon fa fa-comments-o red"></i></td>-->
+                                <!--<td>-->
+                                    <!--<a href="#">应急事件测试</a>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--<span>2015.11.16</span>-->
+                                <!--</td>-->
+
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td style="text-align: right"><i class="ace-icon fa fa-comments-o red"></i></td>-->
+                                <!--<td>-->
+                                    <!--<a href="#">应急事件测试</a>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--<span>2015.11.16</span>-->
+                                <!--</td>-->
+
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td style="text-align: right"></td>-->
+                                <!--<td>-->
+                                    <!--<a href="#">应急事件测试</a>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--<span>2015.11.16</span>-->
+                                <!--</td>-->
+
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td style="text-align: right"></td>-->
+                                <!--<td>-->
+                                    <!--<a href="#">应急事件测试</a>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--<span>2015.11.16</span>-->
+                                <!--</td>-->
+
+                            <!--</tr>-->
+                            <!--</tbody>-->
+                        <!--</table>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="widget-box col-sm-6" style="width: 365px;">-->
+                <!--&lt;!&ndash; #section:custom/widget-box.options &ndash;&gt;-->
+                <!--<div class="widget-header">-->
+                    <!--<h5 class="widget-title bigger lighter">-->
+                        <!--<i class="ace-icon fa fa-bullhorn green"></i>-->
+                        <!--<span style="font-weight: bold">特别工作状态</span>-->
+                    <!--</h5>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /section:custom/widget-box.options &ndash;&gt;-->
+                <!--<div class="widget-body">-->
+                    <!--<div class="widget-main no-padding">-->
+                        <!--<table class="table table-striped table-hover">-->
+
+
+                            <!--<tbody>-->
+                            <!--<tr>-->
+                                <!--<td style="text-align: right"><i class="ace-icon fa fa-comments-o red"></i></td>-->
+                                <!--<td>-->
+                                    <!--<a href="#">应急事件测试</a>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--<span>2015.11.16</span>-->
+                                <!--</td>-->
+
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td style="text-align: right"></td>-->
+                                <!--<td>-->
+                                    <!--<a href="#">应急事件测试</a>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--<span>2015.11.16</span>-->
+                                <!--</td>-->
+
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td style="text-align: right"><i class="ace-icon fa fa-comments-o red"></i></td>-->
+                                <!--<td>-->
+                                    <!--<a href="#">应急事件测试</a>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--<span>2015.11.16</span>-->
+                                <!--</td>-->
+
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td style="text-align: right"><i class="ace-icon fa fa-comments-o red"></i></td>-->
+                                <!--<td>-->
+                                    <!--<a href="#">应急事件测试</a>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--<span>2015.11.16</span>-->
+                                <!--</td>-->
+
+                            <!--</tr>-->
+                            <!--</tbody>-->
+                        <!--</table>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+
+    <div class="col-xs-4" style="padding-left: 1px">
+        <div class="col-sm-12">
+
+            <div class="widget-box" >
+                <!-- #section:custom/widget-box.options -->
+                <div class="widget-header">
+                    <h5 class="widget-title bigger lighter">
+                        <i class="ace-icon fa fa-bullhorn green"></i>
+                        <span style="font-weight: bold">最新公告</span>
+                    </h5>
+                </div>
+                <!-- /section:custom/widget-box.options -->
+                <div class="widget-body">
+                    <div class="widget-main no-padding">
+                        <table class="table table-striped table-hover">
+
+
+                            <tbody>
+                            <tr>
+                                <td style="text-align: right"><i class="ace-icon fa fa-comments-o red"></i></td>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td>
+                                    <span>2015.11.16</span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: right"><i class="ace-icon fa fa-comments-o red"></i></td>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td>
+                                    <span>2015.11.16</span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: right"></td>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td>
+                                    <span>2015.11.16</span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: right"></td>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td>
+                                    <span>2015.11.16</span>
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="widget-box " >
+                <!-- #section:custom/widget-box.options -->
+                <div class="widget-header">
+                    <h5 class="widget-title bigger lighter">
+                        <i class="ace-icon fa fa-bullhorn green"></i>
+                        <span style="font-weight: bold">特别工作状态</span>
+                    </h5>
+                </div>
+                <!-- /section:custom/widget-box.options -->
+                <div class="widget-body">
+                    <div class="widget-main no-padding">
+                        <table class="table table-striped table-hover">
+
+
+                            <tbody>
+                            <tr>
+                                <td style="text-align: right"><i class="ace-icon fa fa-comments-o red"></i></td>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td>
+                                    <span>2015.11.16</span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: right"></td>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td>
+                                    <span>2015.11.16</span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: right"><i class="ace-icon fa fa-comments-o red"></i></td>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td>
+                                    <span>2015.11.16</span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: right"><i class="ace-icon fa fa-comments-o red"></i></td>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td>
+                                    <span>2015.11.16</span>
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget-box">
+                <!-- #section:custom/widget-box.options -->
+                <div class="widget-header">
+                    <h5 class="widget-title bigger lighter">
+                        <i class="ace-icon fa fa-bell orange"></i>
+                        <span style="font-weight: bold">国家局响应</span>
+                    </h5>
+                </div>
+                <!-- /section:custom/widget-box.options -->
+                <div class="widget-body">
+                    <div class="widget-main no-padding">
+                        <table class="table table-striped table-hover">
+                            <thead class="thin-border-bottom">
+                            <tr>
+                                <th>
+                                    应急响应名称
+                                </th>
+                                <th>
+                                    响应类别
+                                </th>
+                                <th class="hidden-480">
+                                    级别
+                                </th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td class=""><span
+                                        class="label label-success  arrowed arrowed-right">暴雨</span>
+                                </td>
+                                <td class="hidden-480">
+                                    Ⅱ
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">重要事件测试</a>
+                                </td>
+                                <td class=""><span
+                                        class="label label-danger  arrowed arrowed-right">台风</span>
+                                </td>
+                                <td class="hidden-480">
+                                    Ⅱ
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">ZX灾害测试</a>
+                                </td>
+                                <td class=""><span
+                                        class="label label-purple  arrowed arrowed-right">洪水</span>
+                                </td>
+                                <td class="hidden-480">
+                                    Ⅱ
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget-box ">
+                <!-- #section:custom/widget-box.options -->
+                <div class="widget-header">
+                    <h5 class="widget-title bigger lighter">
+                        <i class="ace-icon fa fa-bell orange"></i>
+                        <span style="font-weight: bold">省局响应</span>
+                    </h5>
+                </div>
+
+                <!-- /section:custom/widget-box.options -->
+                <div class="widget-body">
+                    <div class="widget-main no-padding">
+                        <table class="table table-striped table-hover">
+                            <thead class="thin-border-bottom">
+                            <tr>
+                                <th>
+                                    应急响应名称
+                                </th>
+                                <th>
+                                    响应类别
+                                </th>
+                                <th class="hidden-480">
+                                    级别
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td class=""><span
+                                        class="label  label-primary arrowed arrowed-right">冰雹</span>
+                                </td>
+                                <td class="hidden-480">
+                                    Ⅱ
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td class=""><span
+                                        class="label label-pink arrowed arrowed-right">干旱</span>
+                                </td>
+                                <td class="hidden-480">
+                                    Ⅱ
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="#">应急事件测试</a>
+                                </td>
+                                <td class=""><span
+                                        class="label label-grey arrowed arrowed-right">雾霾</span>
+                                </td>
+                                <td class="hidden-480">
+                                    Ⅱ
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget-box ">
+                <!-- #section:custom/widget-box.options -->
+                <div class="widget-header ">
+                    <h5 class="widget-title bigger lighter">
+                        <i class="ace-icon fa fa-cloud"></i>
+                        <span style="font-weight: bold">应急管理动态</span>
+                    </h5>
+                </div>
+                <!-- /section:custom/widget-box.options -->
+                <div class="widget-body">
+                    <div class="widget-main no-padding">
+                        <table class="table table-striped table-hover">
+                            <thead class="thin-border-bottom">
+                            <tr>
+                                <th>
+                                    名称
+                                </th>
+                                <th>
+                                    创建时间
+                                </th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">应急管理动态</a>
+                                </td>
+
+                                <td>
+                                    2015-11-12 13.45
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">应急管理动态</a>
+                                </td>
+
+                                <td>
+                                    2015-11-12 13.45
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="#">应急管理动态</a>
+                                </td>
+
+                                <td>
+                                    2015-11-12 13.45
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">应急管理动态</a>
+                                </td>
+
+                                <td>
+                                    2015-11-12 13.45
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="#">应急管理动态</a>
+                                </td>
+
+                                <td>
+                                    2015-11-12 13.45
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="widget-box transparent" id="recent-box">-->
+                <!--<div class="widget-header">-->
+                    <!--<div class="widget-toolbar no-border">-->
+                        <!--<ul class="nav nav-tabs" id="recent-tab">-->
+                            <!--<li class="active">-->
+                                <!--<a data-toggle="tab" href="#outburst-tab">突发事件统计</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a data-toggle="tab" href="#answer-tab">应急响应统计</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+                <!--<div class="widget-body">-->
+                    <!--<div class="widget-main padding-4">-->
+                        <!--<div class="tab-content padding-8">-->
+                            <!--<div id="outburst-tab" class="tab-pane active">-->
+                                <!--&lt;!&ndash;<h4 class="smaller lighter green">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<i class="ace-icon fa fa-list"></i>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;突发事件&ndash;&gt;-->
+                                <!--&lt;!&ndash;</h4>&ndash;&gt;-->
+                                <!--<div id="chart" class=" widget-container-col" style="width:100%; height: 200px;"></div>-->
+                            <!--</div>-->
+                            <!--<div id="answer-tab" class="tab-pane">-->
+                                <!--<h4 class="smaller lighter green">-->
+                                    <!--<i class="ace-icon fa fa-list"></i>-->
+                                    <!--应急响应-->
+                                <!--</h4>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+
+<!--[if lte IE 8]>
+<script src="../../assets/js/excanvas.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    var scripts = [null, "../../assets/js/jquery-ui.custom.js", null]
+    $('.page-content-area').ace_ajax('loadScripts', scripts, function () {
+        //inline scripts related to this page
+        jQuery(function ($) {
+
+            mapChart();
+            analysisChart();
+            function mapChart() {
+
+                var myChart = echarts.init(document.getElementById('map'));
+                var option = {
+                    tooltip: {
+                        trigger: 'item'
+                    },
+                    dataRange: {
+                        min: 0,
+                        max: 500,
+                        calculable: true,
+                        color: ['lightgreen', '#E24139'],
+                        show: false
+                    },
+                    //右侧的操作按钮
+                    toolbox: {
+                        show: true,
+                        orient: 'vertical',
+                        x: 'right',
+                        y: 'center',
+                        feature: {
+                            mark: {show: true},
+                            dataView: {show: true, readOnly: false},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    series: [
+                        {
+                            name: 'ZX预警',
+                            type: 'map',
+                            mapType: 'china',
+                            hoverable: false,
+                            roam: true,
+                            data: [],
+                            itemStyle: {
+                                normal: {
+                                    borderWidth: 1,
+                                    borderColor: '#E7F3FF',
+                                    color: '#A9DBF6',
+                                    lable: {
+                                        show: false
+                                    }
+                                }
+                            },
+                            markPoint: {
+                                symbolSize: 5,       // 标注大小，半宽（半径）参数，当图形为方向或菱形则总宽度为symbolSize * 2
+                                itemStyle: {
+                                    normal: {
+                                        borderColor: '#87cefa',
+                                        borderWidth: 1,            // 标注边线线宽，单位px，默认为1
+                                        label: {
+                                            show: false
+                                        },
+                                    },
+                                    emphasis: {
+                                        borderColor: '#1e90ff',
+                                        borderWidth: 5,
+                                        label: {
+                                            show: false
+                                        }
+                                    }
+                                },
+                                data: [
+                                    {name: "兰州"},
+                                    {name: "廊坊"},
+                                    {name: "包头"},
+                                    {name: "武汉"},
+                                    {name: "大庆"}
+                                ]
+                            },
+                            geoCoord: {
+                                "兰州": [103.73, 36.03],
+                                "包头": [110, 40.58],
+                                "廊坊": [116.7, 39.53],
+                                "武汉": [114.31, 30.52],
+                                "大庆": [125.03, 46.58]
+                            }
+                        },
+                        {
+                            name: '应急事件',
+                            type: 'map',
+                            mapType: 'china',
+                            data: [],
+                            markPoint: {
+                                symbol: 'emptyCircle',
+                                symbolSize: function (v) {
+                                    return 10 + v / 100
+                                },
+                                //标点的外侧的放大圈
+                                effect: {
+                                    show: true,
+                                    shadowBlur: 0
+                                },
+                                itemStyle: {
+                                    normal: {
+                                        label: {show: false}
+                                    }
+                                },
+                                data: [
+                                    {name: "兰州"},
+                                    {name: "廊坊"},
+                                    {name: "包头"},
+                                    {name: "武汉"},
+                                    {name: "大庆"}
+                                ]
+                            }
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+            }
+
+            function analysisChart(){
+                var myChart = echarts.init(document.getElementById('chart'));
+             var   option = {
+                    title : {
+                        text: '突发事件统计',
+                        subtext: '纯属虚构'
+                    },
+                    tooltip : {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data:['突发事件']
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: true},
+                            dataView : {show: true, readOnly: false},
+                            magicType : {show: true, type: ['line', 'bar']},
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    xAxis : [
+                        {
+                            type : 'category',
+                            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'value'
+                        }
+                    ],
+                    series : [
+                        {
+                            name:'事件',
+                            type:'bar',
+                            data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+                            markPoint : {
+                                data : [
+                                    {type : 'max', name: '最大值'},
+                                    {type : 'min', name: '最小值'}
+                                ]
+                            },
+                            markLine : {
+                                data : [
+                                    {type : 'average', name: '平均值'}
+                                ]
+                            }
+                        }
+
+                    ]
+                };
+                myChart.setOption(option);
+            }
+
+        });
+
+    });
+</script>

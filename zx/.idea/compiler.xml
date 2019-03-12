@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="duty-platform-auth" />
+        <module name="duty-platform-common" />
+        <module name="duty-platform-model" />
+        <module name="duty-platform-service" />
+        <module name="duty-platform-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="duty-platform" target="1.5" />
+      <module name="duty-platform-auth" target="1.7" />
+      <module name="duty-platform-common" target="1.7" />
+      <module name="duty-platform-model" target="1.7" />
+      <module name="duty-platform-service" target="1.7" />
+      <module name="duty-platform-web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: javax.wsdl:javax.wsdl:1.4.0.v200706111329">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/wsdl/javax.wsdl/1.4.0.v200706111329/javax.wsdl-1.4.0.v200706111329.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/wsdl/javax.wsdl/1.4.0.v200706111329/javax.wsdl-1.4.0.v200706111329-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/wsdl/javax.wsdl/1.4.0.v200706111329/javax.wsdl-1.4.0.v200706111329-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

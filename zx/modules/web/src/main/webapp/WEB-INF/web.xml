@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+    <display-name>cma-ems</display-name>
+
+    <!--设置首次访问页-->
+    <welcome-file-list>
+        <!--<welcome-file>login.jsp</welcome-file>-->
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <!--设置session过期时间-->
+    <session-config>
+        <session-timeout>-1</session-timeout>
+    </session-config>
+
+    <!--读取spring的配置文件-->
+    <!-- Spring ApplicationContext配置文件的路径,可使用通配符,多个路径用,号分隔
+           此参数用于后面的Spring Context Loader -->
+    <!--若想实现后台定时任务 需要加配置文件路径classpath:conf/spring/applicationContext-quartz.xml-->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:conf/applicationContext.xml,classpath:conf/applicationContext-shiro.xml
+        </param-value>
+    </context-param>
+
+    <!--Spring的ApplicationContext 载入 -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <!-- Spring 刷新Introspector防止内存泄露 -->
+    <listener>
+        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+    </listener>
+
+    <!--过滤session-->
+    <filter>
+        <filter-name>sessionFilter</filter-name>
+        <filter-class>com.taiji.frame.filter.SessionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>sessionFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+    <!--为了能够处理中文的post请求，再配置一个encodingFilter，以避免post请求中文出现乱码情况 -->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- 配置Shiro过滤器,先让Shiro过滤系统接收到的请求 -->
+    <!-- 这里filter-name必须对应applicationContext.xml中定义的<bean id="shiroFilter"/> -->
+    <!-- 使用[/*]匹配所有请求,保证所有的可控请求都经过Shiro的过滤 -->
+    <filter>
+        <filter-name>shiroFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>shiroFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+    <!--单点登录 servlet-->
+    <!--<servlet>-->
+    <!--<servlet-name>saveresource</servlet-name>-->
+    <!--<servlet-class>com.taiji.frame.servlet.ResourceServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>saveresource</servlet-name>-->
+    <!--<url-pattern>/saveresource</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <servlet>
+        <servlet-name>identitychallengehttp</servlet-name>
+        <servlet-class>com.taiji.frame.servlet.IdentityChallengeHttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>identitychallengehttp</servlet-name>
+        <url-pattern>/identitychallengehttp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>identitytickethttp</servlet-name>
+        <servlet-class>com.taiji.frame.servlet.IdentityTicketHttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>identitytickethttp</servlet-name>
+        <url-pattern>/identitytickethttp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>identitychallengews</servlet-name>
+        <servlet-class>com.taiji.frame.servlet.IdentityChallengeWsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>identitychallengews</servlet-name>
+        <url-pattern>/identitychallengews</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>identityticketws</servlet-name>
+        <servlet-class>com.taiji.frame.servlet.IdentityTicketWsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>identityticketws</servlet-name>
+        <url-pattern>/identityticketws</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>authentification</servlet-name>
+        <servlet-class>com.taiji.frame.servlet.AuthentificationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>authentification</servlet-name>
+        <url-pattern>/authentification</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>timestamp</servlet-name>
+        <servlet-class>com.taiji.frame.servlet.TimestampServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>timestamp</servlet-name>
+        <url-pattern>/timestamp</url-pattern>
+    </servlet-mapping>
+
+
+    <!--用于拦截请求，所有请求交由spring来管理-->
+    <servlet>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:conf/mvc-dispatcher-servlet.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!--延迟加载-->
+    <filter>
+        <filter-name>hibernateOpenSessionInViewFilter</filter-name>
+        <filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>hibernateOpenSessionInViewFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- 实现跨域 -->
+    <filter>
+        <filter-name>CORS</filter-name>
+        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+        <init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>*</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedMethods</param-name>
+            <param-value>GET, POST, HEAD, PUT, DELETE</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedHeaders</param-name>
+            <param-value>Accept, Origin, X-Requested-With, Content-Type, Last-Modified</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.exposedHeaders</param-name>
+            <param-value>Set-Cookie</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportsCredentials</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CORS</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+</web-app>

@@ -1,0 +1,136 @@
+<title>ZX局应急平台</title>
+<div class="page-header">
+    <h1>
+        应急响应管理
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            通讯录管理
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            电话号码薄
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+
+<!-- ajax layout which only needs content area -->
+<div class="row">
+    <div class="col-xs-2 align-right">
+            <h4>
+                <b>姓名：</b>
+            </h4>
+    </div>
+    <div class="col-xs-8">
+        <div class="left">
+            <h4>
+                张三
+            </h4>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <button class="btn btn-sm btn-success" id="returnYJButton" style="float: right;margin-bottom: 5px;"
+                onclick="javascript:history.back(-1);">
+            <i class="ace-icon fa fa-arrow-left  bigger-120"></i>
+            返回
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2 align-right">
+            <h4>
+                <b>所属机构：</b>
+            </h4>
+    </div>
+    <div class="col-xs-4 left">
+            <h4>
+                中国ZX局-应急办公室
+            </h4>
+    </div>
+    <div class="col-xs-4 align-center">
+            <h4>
+                <b>单位职务：</b>中心主任
+            </h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2 align-right">
+        <h4>
+            <b>人员职责：</b>
+        </h4>
+    </div>
+    <div class="col-xs-4 left">
+        <h4>
+            人员组织,场外部署,心理辅导,灾情分析,灾情统计
+        </h4>
+    </div>
+    <div class="col-xs-4 align-center">
+        <h4>
+            <b>专业类型：</b>抢险救灾
+        </h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-2 align-right">
+        <h4>
+            <b>移动电话：</b>
+        </h4>
+    </div>
+    <div class="col-xs-4 left">
+        <h4>
+            13901011234
+        </h4>
+    </div>
+    <div class="col-xs-4 align-center">
+        <h4>
+            <b>办公电话：</b>010-12345678
+        </h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2 align-right">
+        <h4>
+            <b>Email：</b>
+        </h4>
+    </div>
+    <div class="col-xs-4 left">
+        <h4>
+            zhangsan@mail.taiji.com.cn
+        </h4>
+    </div>
+    <div class="col-xs-4 align-center">
+        <h4>
+            <b>Notes：</b>zhangsan@note.cn
+        </h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2 align-right">
+        <h4>
+            <b>备注：</b>
+        </h4>
+    </div>
+    <div class="col-xs-10 left">
+        <h4>
+            机构第一联络人； 机构紧急联系人；
+        </h4>
+    </div>
+</div>
+<script type="text/javascript">
+    var scripts = [null, null]
+    $('.page-content-area').ace_ajax('loadScripts', scripts, function () {
+        //inline scripts related to this page
+        jQuery(function ($) {
+            $('[data-toggle="buttons"] .btn').on('click', function (e) {
+                var target = $(this).find('input[type=radio]');
+                var which = parseInt(target.val());
+                $('[id*="timeline-"]').addClass('hide');
+                $('#timeline-' + which).removeClass('hide');
+            });
+        });
+
+    });
+</script>
+

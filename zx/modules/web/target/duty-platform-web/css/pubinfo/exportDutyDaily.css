@@ -1,0 +1,51 @@
+.dutyDaily * {
+
+    margin: 0;
+    padding: 0;
+    font-size: 16pt;
+    font-family: 仿宋_GB2312, Arial, Helvetica, sans-serif;
+    background-color: white;
+    line-height: normal;
+}
+
+.dutyDaily font .number {
+
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+.dutyDaily .row {
+
+    width: 100%;
+
+}
+
+.dutyDaily .title {
+
+    text-align: center;
+
+}
+
+.dutyDaily .title span {
+
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.dutyDaily .subtitle {
+
+
+
+}
+
+.dutyDaily .subtitle .leftInfo {
+
+    text-align: left;
+}
+
+.dutyDaily .subtitle .rightInfo {
+
+    text-align: right;
+
+
+}

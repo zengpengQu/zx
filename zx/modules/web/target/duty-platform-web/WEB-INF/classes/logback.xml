@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<configuration debug="true">
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5p [%thread] [%F:%L] : %logger{36} - %m%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>../mmslog.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!--
+    org log日志关闭
+
+    jdbc.sqlonly           仅记录SQL。
+    jdbc.sqltiming         计时统计SQL的执行用时。
+    jdbc.audit             记录所有的JDBC调用（ResultSet的除外）。Log量非常大，会影响性能，建议关闭。 一般情况下不需要开这个设定，除非追踪一个特定的JDBC问题。
+    jdbc.resultset         比audit量更大，包括ResultSet对象，记录所有的JDBC记录。建议关闭
+    jdbc.connection        记录打开和关闭连接以及打开的连接数。用于追踪连接泄漏问题，非常有用。
+     -->
+    <logger name="org" level="ERROR" />
+    <logger name="org.hibernate.SQL" level="ERROR" />
+    <logger name="org.springframework" level="DEBUG" />
+    <logger name="jdbc.sqlonly" level="ERROR" />
+    <logger name="jdbc.sqltiming" level="ERROR" />
+    <logger name="jdbc.audit" level="ERROR" />
+    <logger name="jdbc.resultset" level="ERROR" />
+    <logger name="jdbc.connection" level="ERROR" />
+    <logger name="com.taiji.frame" level="ERROR" />
+
+    <!-- 发布不能用DEBUG 要用ERROR -->
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+       <!-- <appender-ref ref="FILE" />
+         -->
+    </root>
+
+    <!--<root level="DEBUG">-->
+        <!--<appender-ref ref="STDOUT" />-->
+        <!--&lt;!&ndash;-->
+        <!--<appender-ref ref="STDOUT" />-->
+        <!--<appender-ref ref="FILE" />-->
+         <!--&ndash;&gt;-->
+    <!--</root>-->
+
+</configuration>

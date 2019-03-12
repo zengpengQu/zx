@@ -1,0 +1,1007 @@
+<link rel="stylesheet" href="../../assets/css/jquery-ui.custom.css" />
+<link rel="stylesheet" href="../../assets/css/chosen.css" />
+<link rel="stylesheet" href="../../assets/css/datepicker.css" />
+<link rel="stylesheet" href="../../assets/css/bootstrap-timepicker.css" />
+<link rel="stylesheet" href="../../assets/css/daterangepicker.css" />
+<link rel="stylesheet" href="../../assets/css/bootstrap-datetimepicker.css" />
+<link rel="stylesheet" href="../../assets/css/colorpicker.css" />
+
+<div class="page-header">
+    <h1>
+        突发事件管理
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            突发事件统计
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <!-- PAGE CONTENT BEGINS -->
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- #section:elements.tab -->
+                <div class="tabbable">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active">
+                            <a data-toggle="tab" href="#country">
+                                按类别统计
+                                 <!--<span class="badge badge-danger">2</span>-->
+                            </a>
+                        </li>
+
+                        <li>
+                            <a data-toggle="tab" href="#prov">
+                               按上报单位统计
+                                <!--<span class="badge badge-danger">4</span>-->
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="country" class="tab-pane fade in active">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <!-- PAGE CONTENT BEGINS -->
+                                    <div class="row">
+                                        <div class="widget-container-col" style="margin-left: 10px">
+                                            <div class="widget-box collapsed" style="width: 99%;">
+                                                <div class="widget-header">
+                                                    <h6 class="widget-title" style="font-weight: bold;color: #717171">查询条件</h6>
+                                                    <div class="widget-toolbar">
+                                                        <a href="#" data-action="collapse">
+                                                            <i class="1 ace-icon fa fa-angle-down bigger-155"></i>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="widget-body">
+                                                    <div class="widget-main"  style="height: 185px">
+                                                        <div class="col-xs-12">
+                                                            <div class="widget-box" style="border-color: white">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        <form class="form-horizontal" id="materialBreakForm" role="form">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-xs-3 control-label no-padding-right">
+                                                                                            统计日期：
+                                                                                        </label>
+                                                                                        <div class="col-xs-9">
+                                                                                            <div class="input-daterange input-group" data-date-format="yyyy-mm-dd">
+                                                                                                <input name="start" class="form-control" id="start-date" type="text"/>
+                                                                                <span class="input-group-addon">
+                                                                                    <i class="glyphicon glyphicon-minus"/>
+                                                                                 </span>
+                                                                                                <input name="end" class="form-control" id="end-date" type="text"/>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xs-3">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-xs-4 control-label no-padding-right">
+                                                                                            上报单位：
+                                                                                        </label>
+                                                                                        <div class="col-xs-8">
+                                                                                            <select class="form-control" id="receipts-type">
+                                                                                                <option value="QB">
+                                                                                                    全部
+                                                                                                </option>
+                                                                                                <option value="1">
+                                                                                                    国家ZX局
+                                                                                                <option value="2">
+                                                                                                    北京市ZX局
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xs-3">
+                                                                                    <div class="form-group">
+                                                                                        <label class="pos-rel">
+                                                                                            <input type="checkbox" class="ace"/>
+                                                                                            <span class="lbl">含直属机构</span>
+                                                                                        </label>
+                                                                                        <label class="pos-rel">
+                                                                                            <input type="checkbox" class="ace"/>
+                                                                                            <span class="lbl">含下一级机构</span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xs-9"></div>
+                                                                                <div class="col-xs-3">
+                                                                                    <div class="align-right">
+                                                                                        <button class="btn btn-warning btn-sm" id="searchBtn" type="button">
+                                                                                            <span class="ace-icon fa fa-search icon-on-right bigger-110"/>
+                                                                                            查询
+                                                                                        </button>
+                                                                                        <button class="btn btn-success btn-sm" id="resetBtn" type="reset">
+                                                                                            <span class="ace-icon fa fa-retweet icon-on-right bigger-110"/>
+                                                                                            重置
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <table id="simple-table" class="table table-striped table-bordered table-hover" style="margin-top: 10px">
+                                                <thead>
+                                                <tr>
+                                                    <th class="hide">
+                                                        <label class="pos-rel">
+                                                            <input type="checkbox" class="ace"/>
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </th>
+                                                    <th>事件名称</th>
+                                                    <th>事件类别</th>
+                                                    <th>响应级别</th>
+                                                    <th class="hidden-480">
+                                                        <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                                                        启动时间
+                                                    </th>
+                                                    <th class="hidden-480">
+                                                        <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                                                        解除时间
+                                                    </th>
+                                                    <th>
+                                                        应急区域
+                                                    </th>
+                                                    <th class="hidden-480">状态</th>
+
+                                                </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td class="hide">
+                                                        <label class="pos-rel">
+                                                            <input type="checkbox" class="ace"/>
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+
+                                                    <td>
+                                                        <a data-url="page/timeline1" href="#page/timeline1">ZS测试启动暴雨IV级应急事件</a>
+                                                    </td>
+                                                    <td>暴雨</td>
+                                                    <td>II级</td>
+                                                    <td class="hidden-480">2015-10-30 08：00</td>
+                                                    <td class="hidden-480"></td>
+                                                    <td>北京市，天津市</td>
+
+                                                    <td class="hidden-480">
+                                                        <span class="label label-sm label-warning">已启动</span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="hide">
+                                                        <label class="pos-rel">
+                                                            <input type="checkbox" class="ace"/>
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+
+                                                    <td>
+                                                        <a data-url="page/timeline1" href="#page/timeline1">ZS测试启动暴雨IV级应急事件</a>
+                                                    </td>
+                                                    <td>暴雨</td>
+                                                    <td>IV级</td>
+                                                    <td class="hidden-480">2015-10-30 08：00</td>
+                                                    <td class="hidden-480">2015-10-31 18：00</td>
+                                                    <td>北京市，天津市</td>
+                                                    <td class="hidden-480">
+                                                        <span class="label label-sm label-success">已解除</span>
+                                                    </td>
+
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- /.span -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="prov" class="tab-pane fade">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <!-- PAGE CONTENT BEGINS -->
+                                    <div class="row">
+                                        <div class="widget-container-col" style="margin-left: 10px">
+                                            <div class="widget-box collapsed" style="width: 99%;">
+                                                <div class="widget-header">
+                                                    <h6 class="widget-title" style="font-weight: bold;color: #717171">查询条件</h6>
+                                                    <div class="widget-toolbar">
+                                                        <a href="#" data-action="collapse">
+                                                            <i class="1 ace-icon fa fa-angle-down bigger-155"></i>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="widget-body">
+                                                    <div class="widget-main"  style="height: 185px">
+                                                        <div class="col-xs-12">
+                                                            <div class="widget-box" style="border-color: white">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        <form class="form-horizontal" id="materialBreakForm" role="form">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-xs-3 control-label no-padding-right">
+                                                                                            统计日期：
+                                                                                        </label>
+                                                                                        <div class="col-xs-9">
+                                                                                            <div class="input-daterange input-group" data-date-format="yyyy-mm-dd">
+                                                                                                <input name="start" class="form-control" id="start-date" type="text"/>
+                                                                                                    <span class="input-group-addon">
+                                                                                                        <i class="glyphicon glyphicon-minus"/>
+                                                                                                     </span>
+                                                                                                <input name="end" class="form-control" id="end-date" type="text"/>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xs-3">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-xs-4 control-label no-padding-right">
+                                                                                            事件类别：
+                                                                                        </label>
+                                                                                        <div class="col-xs-8">
+                                                                                            <select class="form-control" id="receipts-type">
+                                                                                                <option value="QB">
+                                                                                                    全部
+                                                                                                </option>
+                                                                                                <option value="1">
+                                                                                                    重大ZX灾害
+                                                                                                <option value="2">
+                                                                                                    ZX保障服务
+                                                                                                <option value="3">
+                                                                                                    其他
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-xs-8">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-xs-2 control-label no-padding-right">
+                                                                                            上报单位：
+                                                                                        </label>
+                                                                                        <div class="col-xs-5">
+                                                                                            <select class="form-control" id="receipts-type">
+                                                                                                <option value="QB">
+                                                                                                    全部
+                                                                                                </option>
+                                                                                                <option value="1">
+                                                                                                    国家ZX局
+                                                                                                <option value="2">
+                                                                                                    北京市ZX局
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="col-xs-4">
+                                                                                            <div class="form-group">
+                                                                                                <label class="pos-rel">
+                                                                                                    <input type="checkbox" class="ace"/>
+                                                                                                    <span class="lbl">含直属机构</span>
+                                                                                                </label>
+                                                                                                <label class="pos-rel">
+                                                                                                    <input type="checkbox" class="ace"/>
+                                                                                                    <span class="lbl">含下一级机构</span>
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xs-3">
+                                                                                    <div class="align-right">
+                                                                                        <button class="btn btn-warning btn-sm" id="searchBtn" type="button">
+                                                                                            <span class="ace-icon fa fa-search icon-on-right bigger-110"/>
+                                                                                            查询
+                                                                                        </button>
+                                                                                        <button class="btn btn-success btn-sm" id="resetBtn" type="reset">
+                                                                                            <span class="ace-icon fa fa-retweet icon-on-right bigger-110"/>
+                                                                                            重置
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <table id="simple-table" class="table table-striped table-bordered table-hover" style="margin-top: 10px">
+                                                <thead>
+                                                <tr>
+                                                    <th>事件名称</th>
+                                                    <th>事件类别</th>
+                                                    <th>响应级别</th>
+                                                    <th>启动单位</th>
+                                                    <th class="hidden-480">
+                                                        <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                                                        启动时间
+                                                    </th>
+                                                    <th class="hidden-480">
+                                                        <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                                                        解除时间
+                                                    </th>
+                                                    <th>
+                                                        应急区域
+                                                    </th>
+                                                    <th class="hidden-480">状态</th>
+
+                                                </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#modal-table" role="button" data-toggle="modal">ZS测试启动暴雨IV级应急事件</a>
+                                                    </td>
+                                                    <td>暴雨</td>
+                                                    <td>II级</td>
+                                                    <td>北京市ZX局</td>
+                                                    <td class="hidden-480">2015-10-30 08：00</td>
+                                                    <td class="hidden-480"></td>
+                                                    <td>北京市，天津市</td>
+                                                    <td class="hidden-480">
+                                                        <span class="label label-sm label-warning">已启动</span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">ZS测试启动暴雨IV级应急事件</a>
+                                                    </td>
+                                                    <td>暴雨</td>
+                                                    <td>III级</td>
+                                                    <td>北京市ZX局</td>
+                                                    <td class="hidden-480">2015-10-30 08：00</td>
+                                                    <td class="hidden-480">2015-10-31 18：00</td>
+                                                    <td>北京市，天津市</td>
+                                                    <td class="hidden-480">
+                                                        <span class="label label-sm label-success">已解除</span>
+                                                    </td>
+
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- /.span -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+
+                <!-- /section:elements.tab -->
+                <div id="modal-table" class="modal fade" tabindex="-1">
+                    <div class="modal-widget">
+                        <div class="modal-content">
+                            <div class="modal-header no-padding">
+                                <div class="table-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                        <span class="white">&times;</span>
+                                    </button>
+                                    突发事件统计
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="center">
+                                        <h1>
+                                            北京市城区暴雨II级响应
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="align-right">
+                                        <h4>
+                                            启动时间： 2015-10-19 21:00
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1">
+                                </div>
+                                <div class="col-xs-5">
+                                    <div class="left">
+                                        <h4>
+                                            状态：解除
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <!-- PAGE CONTENT BEGINS -->
+                                    <div class="align-right">
+                                        <!--			<span class="green middle bolder">Choose timeline: &nbsp;</span>
+
+                                                    <div class="btn-toolbar inline middle no-margin">
+                                                        <div data-toggle="buttons" class="btn-group no-margin">
+                                                            <label class="btn btn-sm btn-yellow active">
+                                                                <span class="bigger-110">1</span>
+
+                                                                <input type="radio" value="1" />
+                                                            </label>
+
+                                                            <label class="btn btn-sm btn-yellow">
+                                                                <span class="bigger-110">2</span>
+
+                                                                <input type="radio" value="2" />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    -->
+                                    </div>
+
+                                    <div id="timeline-1">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                                                <!-- #section:pages/timeline -->
+
+                                                <div class="timeline-container">
+                                                    <div class="timeline-label">
+                                                        <!-- #section:pages/timeline.label -->
+							<span class="label label-primary arrowed-in-right label-lg">
+								<b>解除应急事件"北京城区暴雨II级响应"</b>
+							</span>
+
+                                                        <!-- /section:pages/timeline.label -->
+                                                    </div>
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-book btn btn-success no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-20 19:21 <a href="#" >天津ZX局发布评估报告</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-asterisk btn btn-yellow no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-20 19:01 <a href="#" >领导AAA添加批示</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-leaf btn btn-primary no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-20 18:20 <a href="#" >解除应急事件"北京城区暴雨II级响应"</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+
+                                                </div><!-- /.timeline-container -->
+
+                                                <div class="timeline-container">
+                                                    <div class="timeline-label">
+							<span class="label label-primary arrowed-in-right label-lg">
+								<b>调整应急事件"北京城区暴雨II级响应"</b>
+							</span>
+                                                    </div>
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-info-circle btn btn-danger no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-20 13:10 <a href="#" >国家ZX局发布第二次通报，通报时间：2015-10-20 23:50 地点：ZX中心6楼会议室</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-pencil-square-o btn btn-grey no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-20 12:00 <a href="#" >天津ZX局2015-10-20日摘报</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-pencil-square-o btn btn-grey no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-20 11:00 <a href="#" >河北省ZX局2015-10-20日摘报</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-cog btn btn-purple no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-20 10:00 <a href="#" >调整应急事件"北京城区暴雨II级响应",响应单位：北京市ZX局，天津市ZX局，河北省ZX局</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-pencil-square-o btn btn-grey no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-20 09:00 <a href="#" >北京ZX局2015-10-20日摘报</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-asterisk btn btn-yellow no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-20 08:00 <a href="#" >领导AAA添加批示</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-info-circle btn btn-danger no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-20 05:00 <a href="#" >国家ZX局发布第一次通报，通报时间：2015-10-19 23:50 地点：ZX中心6楼会议室</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-leaf btn btn-primary no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-19 22:00 <a href="#" >调整应急事件"北京城区暴雨II级响应"，响应单位：北京市ZX局，天津市ZX局</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+
+                                                </div><!-- /.timeline-container -->
+
+                                                <div class="timeline-container">
+                                                    <div class="timeline-label">
+							<span class="label label-primary arrowed-in-right label-lg">
+								<b>启动应急事件"北京城区暴雨I级响应"</b>
+							</span>
+                                                    </div>
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-bell-o btn btn-pink no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-19 21:00 <a href="#" >注意事项1</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <i class="timeline-indicator ace-icon fa fa-leaf btn btn-primary no-hover green"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main">
+                                                                        2015-10-19 21:00 <a href="#" >启动应急事件"北京城区暴雨I级响应"，响应单位：北京市ZX局，天津市ZX局</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+                                                </div><!-- /.timeline-container -->
+
+                                                <!-- /section:pages/timeline -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="timeline-2" class="hide">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                                                <!-- #section:pages/timeline.style2 -->
+                                                <div class="timeline-container timeline-style2">
+						<span class="timeline-label">
+							<b>解除应急事件"北京城区暴雨II级响应"</b>
+						</span>
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <span class="timeline-date">11:15 pm</span>
+
+                                                                <i class="timeline-indicator btn btn-info no-hover"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main no-padding">
+											<span class="bigger-110">
+												<a href="#" class="purple bolder">Susan</a>
+												reviewed a product
+											</span>
+
+                                                                        <br />
+                                                                        <i class="ace-icon fa fa-hand-o-right grey bigger-125"></i>
+                                                                        <a href="#">Click to read &hellip;</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <span class="timeline-date">12:30 pm</span>
+
+                                                                <i class="timeline-indicator btn btn-info no-hover"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main no-padding">
+                                                                        Going to
+                                                                        <span class="green bolder">veg cafe</span>
+                                                                        for lunch
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <span class="timeline-date">11:15 pm</span>
+
+                                                                <i class="timeline-indicator btn btn-info no-hover"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main no-padding">
+                                                                        Designed a new logo for our website. Would appreciate feedback.
+                                                                        <a href="#">
+                                                                            Click to see
+                                                                            <i class="ace-icon fa fa-search-plus blue bigger-110"></i>
+                                                                        </a>
+
+                                                                        <div class="space-2"></div>
+
+                                                                        <div class="action-buttons">
+                                                                            <a href="#">
+                                                                                <i class="ace-icon fa fa-heart red bigger-125"></i>
+                                                                            </a>
+
+                                                                            <a href="#">
+                                                                                <i class="ace-icon fa fa-facebook blue bigger-125"></i>
+                                                                            </a>
+
+                                                                            <a href="#">
+                                                                                <i class="ace-icon fa fa-reply light-green bigger-130"></i>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <span class="timeline-date">9:00 am</span>
+
+                                                                <i class="timeline-indicator btn btn-info no-hover"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main no-padding">
+                                                                        <a href="#" class="purple bolder">Susan</a>
+                                                                        Took the final exam. Phew!
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+                                                </div><!-- /.timeline-container -->
+
+                                                <!-- /section:pages/timeline.style2 -->
+                                                <div class="timeline-container timeline-style2">
+						<span class="timeline-label">
+							<b>调整应急事件"北京城区暴雨II级响应"</b>
+						</span>
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <span class="timeline-date">9:00 am</span>
+
+                                                                <i class="timeline-indicator btn btn-success no-hover"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main no-padding">
+                                                                        <div class="clearfix">
+                                                                            <div class="pull-left">
+                                                                                <span class="orange2 bolder">Haloween party</span>
+
+                                                                                Lots of fun at Haloween party.
+                                                                                <br />
+                                                                                Take a look at some pics:
+                                                                            </div>
+
+                                                                            <div class="pull-right">
+                                                                                <i class="ace-icon fa fa-chevron-left blue bigger-110"></i>
+
+                                                                                &nbsp;
+                                                                                <img alt="Image 4" width="36" src="../../assets/images/gallery/thumb-4.jpg" />
+                                                                                <img alt="Image 3" width="36" src="../../assets/images/gallery/thumb-3.jpg" />
+                                                                                <img alt="Image 2" width="36" src="../../assets/images/gallery/thumb-2.jpg" />
+                                                                                <img alt="Image 1" width="36" src="../../assets/images/gallery/thumb-1.jpg" />
+                                                                                &nbsp;
+                                                                                <i class="ace-icon fa fa-chevron-right blue bigger-110"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <span class="timeline-date">9:00 am</span>
+
+                                                                <i class="timeline-indicator btn btn-success no-hover"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main no-padding">
+                                                                        Anim pariatur cliche reprehenderit, enim eiusmod
+                                                                        <span class="pink2 bolder">high life</span>
+                                                                        accusamus terry richardson ad squid &hellip;
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <span class="timeline-date">9:00 am</span>
+
+                                                                <i class="timeline-indicator btn btn-success no-hover"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main no-padding"> Going to cafe for lunch </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <span class="timeline-date">9:00 am</span>
+
+                                                                <i class="timeline-indicator btn btn-success no-hover"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main no-padding">
+                                                                        <span class="red bolder">Critical security patch released</span>
+
+                                                                        <br />
+                                                                        Please download the new patch for maximum security.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+                                                </div><!-- /.timeline-container -->
+
+                                                <div class="timeline-container timeline-style2">
+						<span class="timeline-label">
+							<b>启动应急事件"北京城区暴雨I级响应"</b>
+						</span>
+
+                                                    <div class="timeline-items">
+                                                        <div class="timeline-item clearfix">
+                                                            <div class="timeline-info">
+                                                                <span class="timeline-date">9:00 am</span>
+
+                                                                <i class="timeline-indicator btn btn-grey no-hover"></i>
+                                                            </div>
+
+                                                            <div class="widget-box transparent">
+                                                                <div class="widget-body">
+                                                                    <div class="widget-main no-padding">
+                                                                        <span class="bolder blue">Lorum Ipsum</span>
+                                                                        Anim pariatur cliche reprehenderit, enim eiusmod
+                                                                        <span class="purple bolder">high life</span>
+                                                                        accusamus terry richardson ad squid &hellip;
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.timeline-items -->
+                                                </div><!-- /.timeline-container -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- PAGE CONTENT ENDS -->
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div>
+
+<!-- page specific plugin scripts -->
+    <script type="text/javascript">
+        var scripts = [null,"../../assets/js/jquery-ui.custom.js","../../assets/js/jquery.ui.touch-punch.js","../../assets/js/chosen.jquery.js","../../assets/js/fuelux/fuelux.spinner.js","../../assets/js/date-time/bootstrap-datepicker.js","../../assets/js/date-time/bootstrap-timepicker.js","../../assets/js/date-time/moment.js","../../assets/js/date-time/daterangepicker.js","../../assets/js/date-time/bootstrap-datetimepicker.js","../../assets/js/bootstrap-colorpicker.js","../../assets/js/jquery.knob.js","../../assets/js/jquery.autosize.js","../../assets/js/jquery.inputlimiter.1.3.1.js","../../assets/js/jquery.maskedinput.js","../../assets/js/bootstrap-tag.js", null]
+        $('.page-content-area').ace_ajax('loadScripts', scripts, function() {
+            //inline scripts related to this page
+            jQuery(function($) {
+
+
+                //datepicker plugin
+                //link
+                $('.date-picker').datepicker({
+                    autoclose: true,
+                    todayHighlight: true
+                })
+                    //show datepicker when clicking on the icon
+                        .next().on(ace.click_event, function(){
+                            $(this).prev().focus();
+                        });
+
+                //or change it into a date range picker
+                $('.input-daterange').datepicker({autoclose:true});
+
+                //to translate the daterange picker, please copy the "examples/daterange-fr.js" contents here before initialization
+                $('input[name=date-range-picker]').daterangepicker({
+                    'applyClass' : 'btn-sm btn-success',
+                    'cancelClass' : 'btn-sm btn-default',
+                    locale: {
+                        applyLabel: 'Apply',
+                        cancelLabel: 'Cancel',
+                    }
+                })
+                        .prev().on(ace.click_event, function(){
+                            $(this).next().focus();
+                        });
+
+            });
+        });
+    </script>

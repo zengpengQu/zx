@@ -1,0 +1,150 @@
+
+<div class="col-sm-12" style="width: 90%; padding-left: 120px" >
+<div style="text-align: center;" >
+        <h1 class="widget-title lighter smaller" >
+            <span style="font-weight: bold;color: #2679B5 ">最新动态</span>
+        </h1>
+</div>
+   <div style="border-bottom:1px solid #eee;"></div>
+
+    <div class="widget-body" style="margin-top: 20px">
+        <div class="widget-main no-padding">
+            <!-- #section:pages/dashboard.conversations -->
+            <div class="dialogs">
+                <div class="itemdiv dialogdiv">
+                    <div class="user">
+                        <i class="timeline-indicator ace-icon fa fa-book btn btn-success no-hover bigger-270 img" style="border-color: white"></i>
+                    </div>
+
+                    <div class="body">
+                        <div class="time">
+                            <i class="ace-icon fa fa-clock-o"></i>
+                            <span class="green">3天前</span>
+                        </div>
+
+                        <div class="name">
+                            <i class="label label-sm label-primary arrowed arrowed-right" style="font-style: normal">已审核</i>
+                            <a href="#">河南省ZX局值班员已审核警报</a>
+                        </div>
+                        <div class="text">河南省ZX局关于洛阳暴雨事件发出警报</div>
+
+                        <div class="tools">
+                            <span class="green">2015-11-18 15:09</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itemdiv dialogdiv">
+                    <div class=" user ">
+                        <i class="timeline-indicator ace-icon fa fa-pencil-square-o btn btn-grey no-hover bigger-270 img" style="border-color: white"></i>
+                    </div>
+
+                    <div class="body">
+                        <div class="time">
+                            <i class="ace-icon fa fa-clock-o"></i>
+                            <span class="blue">3天前</span>
+                        </div>
+
+                        <div class="name">
+                            <i class="label label-sm label-danger arrowed arrowed-right" style="font-style: normal">未审核</i>
+                            <a href="#">河北省ZX局领导提交突发事件</a>
+                        </div>
+                        <div class="text">河北省ZX局关于邢台冰雹事件的报告河北省ZX局关于邢台冰雹事件的报告河北省ZX局关于邢台冰雹事件的报告河北省ZX局关于邢台冰雹事件的报告河北省ZX局关于邢台冰雹事件的报告河北省ZX局关于邢台冰雹事件的报告...</div>
+
+                        <div class="tools">
+                           <span class="blue">2015-11-18 15:09</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itemdiv dialogdiv">
+                    <div class="user">
+                        <i class="timeline-indicator ace-icon fa fa-cog btn btn-purple no-hover bigger-270 img"  style="border-color: white"></i>
+                    </div>
+
+                    <div class="body">
+                        <div class="time">
+                            <i class="ace-icon fa fa-clock-o"></i>
+                            <span class="orange">5天前</span>
+                        </div>
+
+                        <div class="name">
+                            <i class="label label-sm label-primary arrowed arrowed-right" style="font-style: normal">已审核</i>
+                            <a href="#">北京市ZX局值班员已审核突发事件</a>
+                        </div>
+                        <div class="text">北京ZX局关于全市大雪的响应</div>
+
+                        <div class="tools">
+                           <span class="orange">2015-11-18 15:09</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="itemdiv dialogdiv">
+                    <div class="user">
+                        <i class="timeline-indicator ace-icon fa fa-info-circle btn btn-danger no-hover bigger-270 img" style="border-color: white"></i>
+                    </div>
+
+                    <div class="body">
+                        <div class="time">
+                            <i class="ace-icon fa fa-clock-o"></i>
+                            <span class="grey">6天前</span>
+                        </div>
+
+                        <div class="name">
+                            <i class="label label-sm label-danger arrowed arrowed-right" style="font-style: normal">未审核</i>
+                            <a href="#">安徽省ZX局上报突发事件</a>
+                        </div>
+                        <div class="text">安徽省ZX局关于大雨预警的申请</div>
+
+                        <div class="tools">
+                           <span class="grey" >2015-11-18 15:09</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itemdiv dialogdiv">
+                    <div class="user">
+                        <i class="timeline-indicator ace-icon fa fa-leaf btn btn-primary no-hover bigger-270 img"style="border-color: white"></i>
+                    </div>
+
+                    <div class="body">
+                        <div class="time">
+                            <i class="ace-icon fa fa-clock-o"></i>
+                            <span class="green">8天前</span>
+                        </div>
+
+                        <div class="name">
+                            <i class="label label-sm label-primary arrowed arrowed-right" style="font-style: normal">已审核</i>
+                            <a href="#">山东省ZX局值班员已审核突发事件</a>
+                        </div>
+                        <div class="text">山东省ZX局关于枣庄紧急事件的报告</div>
+                        <div class="tools">
+                            <span class="green">2015-11-18 15:09</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /section:pages/dashboard.conversations -->
+        </div><!-- /.widget-main -->
+    </div><!-- /.widget-body -->
+</div><!-- /.col -->
+
+<script type="text/javascript">
+    var scripts = [null, null]
+    $('.page-content-area').ace_ajax('loadScripts', scripts, function () {
+        //inline scripts related to this page
+        jQuery(function ($) {
+            $('[data-toggle="buttons"] .btn').on('click', function (e) {
+                var target = $(this).find('input[type=radio]');
+                var which = parseInt(target.val());
+                $('[id*="timeline-"]').addClass('hide');
+                $('#timeline-' + which).removeClass('hide');
+            });
+        });
+
+    });
+</script>

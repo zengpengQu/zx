@@ -1,0 +1,236 @@
+<link rel="stylesheet" href="../../assets/css/select2.css"/>
+<link rel="stylesheet" href="../../assets/css/datepicker.css"/>
+<style>
+    .required {
+        color: #e02222;
+        padding-left: 5px;
+    }
+</style>
+
+<div class="page-header">
+    <h1>
+        系统管理
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            资源配置
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+<!--Dialog展示-->
+
+<div class="row">
+    <div class="col-xs-12">
+        <!-- PAGE CONTENT BEGINS -->
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-sm btn-success" style="float: right;margin-bottom: 5px;">
+                    <i class="ace-icon fa fa-pencil-square-o  bigger-120"></i>
+                    保存
+                </button>
+            </div>
+        </div><!-- #新增按钮-->
+        <div class="row" >
+            <div class="col-sm-3">
+                <div class="widget-box widget-color-blue2" style="margin-top: 0px">
+                    <div class="widget-header">
+                        <h6>角色类别</h6>
+                    </div>
+                    <div class="widget-body">
+                        <div class="widget-main padding-8" style="height: 510px">
+                            <ul id="tree1"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div  class="widget-box widget-color-blue2" style="margin-top: 0px">
+                    <div class="widget-header">
+                        <h6>功能树</h6>
+                    </div>
+                    <div class="widget-body">
+                        <div class="widget-main padding-8" style="height: 510px">
+                            <ul id="tree2"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hr hr-18 dotted hr-double"></div>
+
+    </div>
+    <!-- /.col -->
+</div><!-- /.row -->
+
+<!--tab样式展示-->
+<!--<div class="row">-->
+    <!--<div class="tabbable">-->
+
+        <!--<ul id="myTab" class="nav nav-tabs">-->
+            <!--<li class="active">-->
+                <!--<a href="#home" data-toggle="tab">国家局</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#profile" data-toggle="tab">省局/直属单位</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+
+        <!--<div class="tab-content">-->
+            <!--<div class="tab-pane in active" id="home">-->
+                <!--Demo-->
+            <!--</div>-->
+            <!--<div class="tab-pane" id="profile">-->
+                <!--Demo-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+<!--</div>-->
+
+<!-- page specific plugin scripts -->
+<script type="text/javascript">
+
+    var scripts = [null, "../../assets/js/dataTables/jquery.dataTables.js", "../../assets/js/dataTables/jquery.dataTables.bootstrap.js", "../../assets/js/dataTables/extensions/TableTools/js/dataTables.tableTools.js", "../../assets/js/dataTables/extensions/ColVis/js/dataTables.colVis.js", null]
+    $('.page-content-area').ace_ajax('loadScripts', scripts, function () {
+        //inline scripts related to this page
+        jQuery(function ($) {
+                $.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
+                    _title: function (title) {
+                        var $title = this.options.title || '&nbsp;'
+                        if (("title_html" in this.options) && this.options.title_html == true)
+                            title.html($title);
+                        else title.text($title);
+                    }
+                }));
+            jQuery(function ($) {
+                $('[data-toggle="buttons"] .btn').on('click', function (e) {
+                    var target = $(this).find('input[type=radio]');
+                    var which = parseInt(target.val());
+                    $('[id*="timeline-"]').addClass('hide');
+                    $('#timeline-' + which).removeClass('hide');
+                });
+            });
+
+            //日期控件初始化
+            G.datepicker();
+
+             var sampleData = initiateDemoData();
+            $('#tree1').ace_tree({
+                dataSource: sampleData['dataSource1'],
+                multiSelect: true,
+                cacheItems: true,
+                'open-icon' : 'ace-icon tree-minus',
+                'close-icon' : 'ace-icon tree-plus',
+                'selectable' : true,
+                'selected-icon' : 'ace-icon fa fa-check',
+                'unselected-icon' : 'ace-icon fa fa-times',
+                loadingHTML : '<div class="tree-loading"><i class="ace-icon fa fa-refresh fa-spin blue"></i></div>'
+            });
+
+            function initiateDemoData() {
+                var tree_data = {
+                    'for-sale': {text: '国家级ZX局', type: 'item'},
+                    'for-sale1': {text: '国家级直属机构', type: 'item'},
+                    'for-sale2': {text: '省级ZX局', type: 'item'},
+                    'for-sale3': {text: '省级直属机构', type: 'item'},
+                    'for-sale4': {text: '地市级ZX局', type: 'item'}
+                }
+                var dataSource1 = function(options, callback){
+                    var $data = null
+                    if(!("text" in options) && !("type" in options)){
+                        $data = tree_data;//the root tree
+                        callback({ data: $data });
+                        return;
+                    }
+                    else if("type" in options && options.type == "folder") {
+                        if("additionalParameters" in options && "children" in options.additionalParameters)
+                            $data = options.additionalParameters.children || {};
+                        else $data = {}//no data
+                    }
+
+                    if($data != null)//this setTimeout is only for mimicking some random delay
+                        setTimeout(function(){callback({ data: $data });} , parseInt(Math.random() * 500) + 200);
+
+                    //we have used static data here
+                    //but you can retrieve your data dynamically from a server using ajax call
+                    //checkout examples/treeview.html and examples/treeview.js for more info
+                }
+                return {'dataSource1': dataSource1}
+            }
+
+            var sampleData2 = initiateDemoData2();
+            $('#tree2').ace_tree({
+                dataSource: sampleData2['dataSource2'],
+                multiSelect: true,
+                cacheItems: true,
+                'open-icon' : 'ace-icon tree-minus',
+                'close-icon' : 'ace-icon tree-plus',
+                'selectable' : true,
+                'selected-icon' : 'ace-icon fa fa-check',
+                'unselected-icon' : 'ace-icon fa fa-times',
+                loadingHTML : '<div class="tree-loading"><i class="ace-icon fa fa-refresh fa-spin blue"></i></div>'
+            });
+
+            function initiateDemoData2() {
+                var tree_data = {
+                    'for-sale': {text: '首页', type: 'item'},
+                    'for-sale1': {text: '应急响应管理', type: 'folder'},
+                    'for-sale2': {text: '突发事件管理', type: 'folder'}
+                }
+                tree_data['for-sale1']['additionalParameters'] = {
+                    'children' : {
+                        'app' : {text: '应急事件管理', type: 'folder'},
+                        'arts-crafts' : {text: '应急事件浏览', type: 'item'},
+                        'clothing' : {text: '应急事件统计', type: 'item'}
+                    }
+                }
+                tree_data['for-sale2']['additionalParameters'] = {
+                    'children' : {
+                        'appliances1' : {text: '突发事件', type: 'item'},
+                        'arts-crafts' : {text: '内部突发事件', type: 'item'},
+                        'clothing3' : {text: '突发事件浏览', type: 'item'},
+                        'clothing1' : {text: '突发事件统计', type: 'item'},
+                        'clothing2' : {text: '审核设置', type: 'item'}
+                    }
+                }
+                tree_data['for-sale1']['additionalParameters']['children']['app']['additionalParameters'] = {
+                    'children' : {
+                        'a9' : {text: '新增应急事件', type: 'item'},
+                        'a8' : {text: '编辑', type: 'item'},
+                        'c7' : {text: '删除应急事件', type: 'item'},
+                        'c6' : {text: '管理员删除', type: 'item'},
+                        'c5' : {text: '启动', type: 'item'},
+                        'c4' : {text: '调整', type: 'item'},
+                        'c3' : {text: '新增摘报', type: 'item'}
+                    }
+                }
+                var dataSource2 = function(options, callback){
+                    var $data = null
+                    if(!("text" in options) && !("type" in options)){
+                        $data = tree_data;//the root tree
+                        callback({ data: $data });
+                        return;
+                    }
+                    else if("type" in options && options.type == "folder") {
+                        if("additionalParameters" in options && "children" in options.additionalParameters)
+                            $data = options.additionalParameters.children || {};
+                        else $data = {}//no data
+                    }
+
+                    if($data != null)//this setTimeout is only for mimicking some random delay
+                        setTimeout(function(){callback({ data: $data });} , parseInt(Math.random() * 500) + 200);
+
+                    //we have used static data here
+                    //but you can retrieve your data dynamically from a server using ajax call
+                    //checkout examples/treeview.html and examples/treeview.js for more info
+                }
+                return {'dataSource2': dataSource2}
+            }
+
+            $('#modal-wizard-container').ace_wizard();
+            $('#modal-wizard .wizard-actions .btn[data-dismiss=modal]').removeAttr('disabled');
+
+
+        });
+    });
+</script>

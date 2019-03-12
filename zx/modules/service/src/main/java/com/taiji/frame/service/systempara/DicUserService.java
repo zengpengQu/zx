@@ -1,0 +1,295 @@
+package com.taiji.frame.service.systempara;
+
+import com.taiji.frame.common.util.Carrier;
+import com.taiji.frame.common.util.DateUtil;
+import com.taiji.frame.common.util.MD5Util;
+import com.taiji.frame.model.systempara.DicDept;
+import com.taiji.frame.model.systempara.DicParam;
+import com.taiji.frame.model.systempara.DicUser;
+import com.taiji.frame.model.systempara.SecRole;
+import com.taiji.frame.model.vo.UserVo;
+import com.taiji.frame.util.BaseDAO;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Created by zhangshuai on 2016/2/1.
+ */
+@Service
+@Transactional(propagation = Propagation.REQUIRED, readOnly = true)
+public class DicUserService extends BaseDAO<DicUser> {
+
+    private static final String NUMBER = "0";
+
+    @Autowired
+    private DicDeptService dicDeptService;
+    @Autowired
+    private SecRoleService secRoleService;
+
+    public void load(Carrier<DicUser> carrier, Map<String, Object> map) {
+        StringBuffer hql = new StringBuffer("from DicUser t where 1=1");
+        if (map.containsKey("empName")) {
+            hql.append(" and t.empName like:empName");
+        }
+        if (map.containsKey("searchUserId")) {
+            hql.append(" and t.userId like:searchUserId");
+        }
+        if (map.containsKey("stringList")) {
+            hql.append(" and t.dicDept.id in (:stringList)");
+        }
+        if (map.containsKey("rankId")) {
+            hql.append(" and t.dicParam.id = :rankId");
+        }
+
+        find(carrier, hql.toString(), map);
+    }
+
+
+    /**
+     * 保存用户信息
+     *
+     * @param userVo
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public DicUser saveUser(UserVo userVo) {
+        DicDept dicDept = dicDeptService.get(userVo.getDeptId());
+
+        DicUser user;
+        if (StringUtils.isEmpty(userVo.getId())) {
+            user = new DicUser();
+            user.setCreateDate(userVo.getCreateDate());
+            String password = MD5Util.MD5("123456");
+            user.setPassword(password);
+            if (!StringUtils.isEmpty(userVo.getGivenName())) {
+                user.setIsactive(2);
+            } else {
+                user.setIsactive(1);
+            }
+            List<SecRole> secRoleList = new ArrayList<>();
+            user.setRoleList(secRoleList);
+            String userCode = getUserCode();
+            user.setUserCode(userCode);
+        } else {
+            user = get(userVo.getId());
+//            if(!StringUtils.isEmpty(userVo.getNewPassword())){
+//                user.setPassword(userVo.getNewPassword());
+//            }
+        }
+        user.setSex(userVo.getSex());
+        user.setEmpName(userVo.getEmpName());
+        user.setUserId(userVo.getUserId());
+        user.setDicDept(dicDept);
+        user.setUpdDate(userVo.getUpdDate());
+        if (!StringUtils.isEmpty(userVo.getUpdEmp())) {
+            user.setUpdEmp(userVo.getUpdEmp());
+        } else {
+            user.setUpdEmp("待审核");
+        }
+        if (!StringUtils.isEmpty(userVo.getEmail())) {
+            user.setEmail(userVo.getEmail());
+        }
+        if (!StringUtils.isEmpty(userVo.getFax())) {
+            user.setFax(userVo.getFax());
+        }
+        if (!StringUtils.isEmpty(userVo.getMobile())) {
+            user.setMobile(userVo.getMobile());
+        }
+        if (!StringUtils.isEmpty(userVo.getPhone())) {
+            user.setPhone(userVo.getPhone());
+        }
+
+        if (!StringUtils.isEmpty(userVo.getRoleIds())) {
+            String roleIds = userVo.getRoleIds();
+            String[] roleArray = roleIds.split(",");
+            List<SecRole> secRoleList = user.getRoleList();
+            secRoleList.clear();
+            for (String string : roleArray) {
+                SecRole secRole = secRoleService.get(string);
+                secRoleList.add(secRole);
+            }
+        }
+
+        DicParam dicParam = new DicParam();
+        dicParam.setId(userVo.getRankId());
+        user.setDicParam(dicParam);
+
+        user.setNation(userVo.getNation());
+        user.setBirthday(DateUtil.stringToDate(userVo.getBirthdayStr(), DateUtil.FORMAT_DAY));
+        user.setBirthplace(userVo.getBirthplace());
+        if (StringUtils.isNotEmpty(userVo.getMainDuty())) {
+            user.setMainDuty(userVo.getMainDuty());
+        }
+        user.setCardNumber(userVo.getCardNumber());
+        save(user);
+        return user;
+    }
+
+    /**
+     * @param orgId
+     * @param publicGroupId
+     * @return 根据用户所在机构和公共群组ID，取得用户列表
+     */
+    public List<DicUser> findByCondition(String orgId, String publicGroupId) {
+        StringBuffer hql = new StringBuffer("from DicUser where 1=1 ");
+        Map<String, String> params = new HashMap<>();
+        if ("00".equals(publicGroupId)) {
+            hql.append(" and isEmContact = 1");
+        } else if ("01".equals(publicGroupId)) {
+            hql.append(" and isFirstContact = 1");
+        } else if ("02".equals(publicGroupId)) {
+            hql.append(" and isContact = 1");
+        } else if ("10".equals(publicGroupId)) {
+            hql.append(" and isEmContact = 1 and dicDept.dicOrganization.parentId =:orgId");
+        } else if ("11".equals(publicGroupId)) {
+            hql.append(" and isFirstContact = 1 and dicDept.dicOrganization.parentId =:orgId");
+        } else if ("12".equals(publicGroupId)) {
+            hql.append(" and isContact = 1 and dicDept.dicOrganization.parentId =:orgId");
+        }
+        params.put("orgId", orgId);
+        return find(hql.toString(), params);
+    }
+
+    public List<DicUser> findByDept(String deptId) {
+        String hql = "from DicUser u where u.dicDept.id=:deptId and u.isactive='1'";
+        Map<String, Object> params = new HashMap<>();
+        params.put("deptId", deptId);
+        List<DicUser> list = find(hql, params);
+        return list;
+    }
+
+    /**
+     * 根据部门查询用户信息
+     */
+    public List<DicUser> findUserList(List<String> stringList) {
+
+        Map<String, Object> map = new HashMap<>(1);
+        StringBuffer hql = new StringBuffer();
+
+        hql.append(" from DicUser t where 1=1 ");
+        hql.append(" and t.dicDept.id in (:stringList)");
+        hql.append(" order by t.dicParam.id ");
+
+        map.put("stringList", stringList);
+        return find(hql.toString(), map);
+    }
+
+    /**
+     * 根据级别查询人员 Created by Zbf
+     * 0101 正国级
+     * 0102 副国级
+     * 0111 正部级
+     * 0112 副部级
+     * 0121 正厅局级
+     * 0122 副厅局级
+     * <p>
+     * 人员表数据不全
+     */
+    public List<DicUser> findRankUserList() {
+        String hql = " from DicUser u " +
+                " where (u.dicParam.id = '0101' " +
+                "     or u.dicParam.id = '0102'" +
+                "     or u.dicParam.id = '0111'" +
+                "     or u.dicParam.id = '0112'" +
+                "     or u.dicParam.id = '0121'" +
+                "     or u.dicParam.id = '0122' ) " +
+                "and u.isactive='1'";
+        List<DicUser> leaderNameList = find(hql.toString(), null);
+        return leaderNameList;
+    }
+
+    /**
+     * 根据卫士通资源信息编码 rmsNo 查找人员
+     *
+     * @param rmsNo
+     * @return
+     */
+    public DicUser findByRmsNo(String rmsNo) {
+        StringBuffer hql = new StringBuffer(" from DicUser du where du.rmsNo = :rmsNo");
+        Map<String, Object> params = new HashMap<>(1);
+        params.put("rmsNo", rmsNo);
+
+        return findUnique(hql.toString(), params);
+
+    }
+
+    /**
+     * 查询最大的用户编码
+     *
+     * @return
+     */
+    public DicUser getMaxUser() {
+        StringBuffer hql = new StringBuffer(" from DicUser du where du.userCode = (select max(userCode) from DicUser d)");
+        Map<String, Object> params = new HashMap<String, Object>();
+        DicUser dicUser = null;
+        try {
+            dicUser = findUnique(hql.toString(), params);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dicUser;
+    }
+
+    private String getUserCode() {
+        DicUser maxUser = getMaxUser();
+        String code = maxUser.getUserCode();
+        String userCode;
+        String prefixStr = code.substring(0, 1);
+        String suffixStr = code.substring(1, code.length());
+        int num = Integer.parseInt(suffixStr) + 1;
+        if (suffixStr.startsWith(NUMBER)) {
+            userCode = prefixStr + NUMBER + num;
+        } else {
+            userCode = prefixStr + num;
+        }
+        return userCode;
+    }
+
+    /**
+     * 获取前 count 个用户
+     * @param count
+     * @return
+     */
+    public List<DicUser> getFirstCount(String count) {
+        Map<String, Object> map = new HashMap<>(1);
+        StringBuffer hql = new StringBuffer();
+
+        if (StringUtils.isNotEmpty(count)) {
+            hql.append(" from DicUser t where rownum<=:count ");
+            map.put("count", count);
+        } else {
+            hql.append(" from DicUser t where 1=1 ");
+        }
+        hql.append(" and t.isactive = 1 order by t.empName");
+
+        return find(hql.toString(), map);
+    }
+
+
+    /**
+     * 姓名查询
+     *
+     * @param query
+     * @return
+     */
+    public List<DicUser> searchByQuery(String query) {
+        Map<String, Object> map = new HashMap<>(1);
+        StringBuffer hql = new StringBuffer();
+
+        hql.append(" from DicUser t where 1=1 ");
+        if (StringUtils.isNotEmpty(query)) {
+            hql.append(" and t.empName like :query");
+            map.put("query", query);
+        }
+        hql.append(" order by t.empName ");
+
+        return find(hql.toString(), map);
+    }
+}

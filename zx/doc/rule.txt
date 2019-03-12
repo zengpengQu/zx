@@ -1,0 +1,5 @@
+1.id字段应该用字符串32位，uuid，名称为id。
+2.数据库命名user_name,java userName。
+3.日期类型格式化两种，2018-08-08、2018-08-08 23:24，数据库Date 类型。
+4.字符串类型VARCHAR2,NUMBER,BLOB,CLOB,TEXT,INTEGER,BIGINT,VARCHAR,BIT。
+5.类别尽量用枚举类。

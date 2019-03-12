@@ -1,0 +1,188 @@
+.meetingReport {
+    background-color: white;
+}
+
+.meetingReceipt {
+
+    background-color: white;
+
+}
+
+/* Header */
+.meetingReport .title {
+    text-align: center;
+    padding: 40px 0 40px;
+}
+
+.meetingReport .title h1 {
+
+    padding: 0px;
+    margin: 0 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0f0f0f;
+}
+
+.meetingReport .title h1 span {
+    font-family: "Microsoft YaHei", "宋体", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+    display: block;
+    font-size: 100%;
+    font-weight: bolder;
+    padding: 0.8em 0 0.5em 0;
+    letter-spacing: 2pt;
+}
+
+.meetingReport .content {
+
+    padding: 0px 0 60px;
+
+}
+
+.meetingReport .content p {
+
+    margin: 0;
+    text-indent: 2em;
+    font-size: 16pt;
+    line-height: 40px;
+    font-family: 楷体, Arial, Helvetica, sans-serif;
+}
+
+.meetingReport .content p + p {
+
+    margin-top: 0.5cm;
+}
+
+.meetingReport .foot {
+
+    padding: 10px 0 10px;
+
+}
+
+.meetingReport .foot .office {
+
+    width: 100%;
+
+}
+
+.meetingReport .foot .office span {
+
+    text-align: right;
+    font-family: 楷体, Arial, Helvetica, sans-serif;
+    display: block;
+    font-size: 16pt;
+    padding: 0.5em 3em 0.5em 0;
+    letter-spacing: 2pt;
+
+}
+
+.meetingReport .foot .sendTime {
+
+    width: 100%;
+}
+
+.meetingReport .foot .sendTime span {
+
+    text-align: right;
+    font-family: 楷体, Arial, Helvetica, sans-serif;
+    display: block;
+    font-size: 16pt;
+    padding: 0.5em 1em 0.5em 0;
+    letter-spacing: 2pt;
+
+}
+
+.hr {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    border-width: 1px 0 0 0;
+    border-top: 1px solid #E3E3E3;
+    margin: 12px 0;
+    border-top-color: rgba(0, 0, 0, 0.11);
+}
+
+.hr-double {
+    height: 3px;
+    border-top: 1px solid rgba(0, 0, 0, 0.11);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.hr-18, .hr18 {
+    margin: 18px 0;
+}
+
+.hr.dotted, .hr-dotted {
+    border-style: dotted;
+}
+
+.meetingReceipt input[type='checkbox'] + label::before {
+    content: '\a0'; /*不换行空格*/
+    display: inline-block;
+    vertical-align: 0.2em;
+    width: 0.8em;
+    height: 0.8em;
+    margin-right: .2em;
+    border-radius: .2em;
+    background: silver; /*复选框的背景色*/
+    text-indent: 0.15em;
+    line-height: 0.65;
+}
+
+.meetingReceipt input[type='checkbox'] {
+    /*隐藏掉原先实际的 checkbox 框，之所以没用 display:none; 这种简单直接的方式，是因为这种方法会把它从键盘 tab 键切换焦点的队列中完全删除*/
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.meetingReceipt input[type='checkbox']:checked + label::before {
+    content: '\2713'; /*对号的 Unicode字符*/
+    background: yellowgreen; /*对号的颜色*/
+}
+
+.meetingReceipt .title {
+    text-align: center;
+    padding: 40px 0 40px;
+}
+
+.meetingReceipt .title h1 {
+
+    padding: 0px;
+    margin: 0 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0f0f0f;
+}
+
+.meetingReceipt .title h1 span {
+    font-family: "Microsoft YaHei", "宋体", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+    display: block;
+    font-size: 100%;
+    font-weight: bolder;
+    padding: 0.8em 0 0.5em 0;
+    letter-spacing: 2pt;
+}
+
+.workPlan {
+    font-weight: bold;
+    font-size: 12pt;
+    font-family: 微软雅黑, Arial, Helvetica, sans-serif;
+}
+
+.workPlanDate {
+
+    font-size: 12pt;
+
+}
+
+.workPlanContent {
+
+    text-indent: 2em;
+    font-size: 12pt;
+    font-family: 微软雅黑, Arial, Helvetica, sans-serif;
+    line-height: 40px
+}
+
+/*table, td, th {*/
+    /*background-color: white*/
+/*}*/
